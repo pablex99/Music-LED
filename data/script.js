@@ -136,6 +136,11 @@ function setMode(mode){
   fetch(`/setMode?m=${mode}`)
     .then(() => {
       highlightModeButton(mode);
+      // toggle body classes for mode-specific styling
+      document.body.classList.remove('music-active','manual-active','rainbow-active');
+      if (mode === 'music') document.body.classList.add('music-active');
+      if (mode === 'manual') document.body.classList.add('manual-active');
+      if (mode === 'rainbow') document.body.classList.add('rainbow-active');
       // Mostrar/ocultar elementos según modo
       var manual = document.getElementById('manualSection');
       var beat = document.getElementById('beatSection');
@@ -151,6 +156,7 @@ function setMode(mode){
             // ensure button applies manual color
             var btn = document.getElementById('applyColorBtn');
             if (btn) { btn.textContent = 'Aplicar color'; btn.onclick = applySelectedColor; }
+            var sub = document.getElementById('musicSubmodeSection'); if (sub) sub.style.display = 'none';
       } else if (mode === 'music') {
             if (manual) manual.style.display = 'flex';
             if (beat) beat.style.display = 'block';
@@ -175,10 +181,14 @@ function setMode(mode){
             // make apply button set music color instead of manual color
             var btn2 = document.getElementById('applyColorBtn');
             if (btn2) { btn2.textContent = 'Establecer color (modo Música)'; btn2.onclick = applyMusicColor; }
+            // prefill music-specific controls (submode, step, color)
+            prefillMusicControls();
+            var sub = document.getElementById('musicSubmodeSection'); if (sub) sub.style.display = 'flex';
       } else if (mode === 'rainbow') {
         if (manual) manual.style.display = 'none';
         if (beat) beat.style.display = 'none';
         if (rainbow) rainbow.style.display = 'flex';
+        var sub2 = document.getElementById('musicSubmodeSection'); if (sub2) sub2.style.display = 'none';
         // ensure displayed labels reflect current slider values
         var rs = document.getElementById('rainSpeed');
         var rb = document.getElementById('rainBrightness');
@@ -262,4 +272,56 @@ function applyMusicColor() {
       if (msgEl) msgEl.textContent = 'Error al enviar color';
       console.error('Error enviando color de música:', err);
     }).finally(()=>{ if (btn) btn.disabled = false; });
+}
+
+// Set music submode (mono|multi) via endpoint and update UI
+function setMusicSubmode(mode) {
+  fetch('/setMusicSubmode?m=' + encodeURIComponent(mode))
+    .then(() => {
+      // Update UI highlight
+      var mono = document.getElementById('musicMonoBtn');
+      var multi = document.getElementById('musicMultiBtn');
+      if (mode === 'mono') {
+        if (mono) mono.classList.add('active');
+        if (multi) multi.classList.remove('active');
+      } else {
+        if (multi) multi.classList.add('active');
+        if (mono) mono.classList.remove('active');
+      }
+    }).catch(err => console.error('Error setting music submode', err));
+}
+
+// Debounced update of music step (ms)
+function updateMusicStep(v) {
+  var el = document.getElementById('musicStepVal');
+  if (el) el.innerText = v;
+
+  if (window._musicStepTimeout) clearTimeout(window._musicStepTimeout);
+  window._musicStepTimeout = setTimeout(function(){
+    fetch('/setMusicStep?value=' + encodeURIComponent(v))
+      .catch(err => console.log('Error sending music step', err));
+  }, 120);
+}
+
+// When entering music mode, prefill controls (current color, submode, step)
+function prefillMusicControls() {
+  // ensure picker exists
+  initColorPickerSequence().then(ok => {
+    if (ok) {
+      fetch('/getMusicColor').then(r => r.json()).then(j => {
+        try { colorPicker.color.rgb = { r: j.R, g: j.G, b: j.B }; } catch(e){}
+      }).catch(()=>{});
+    }
+  }).catch(()=>{});
+
+  // fetch submode + step
+  fetch('/getMusicConfig').then(r => r.json()).then(j => {
+    try {
+      if (j.submode === 0 || j.submode === '0') setMusicSubmode('mono');
+      else setMusicSubmode('multi');
+      var msEl = document.getElementById('musicStep');
+      var msVal = document.getElementById('musicStepVal');
+      if (msEl && msVal) { msEl.value = j.stepMs; msVal.innerText = j.stepMs; }
+    } catch(e) { console.warn('Error applying music config', e); }
+  }).catch(()=>{});
 }

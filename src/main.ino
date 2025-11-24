@@ -67,6 +67,14 @@ const int beatHoldTime = 150; // ms
 double beatThreshold = 400.0;
 
 // ===============================
+// CONFIG MUSIC SUBMODE + MULTICOLOR
+// ===============================
+int musicSubmode = 0; // 0 = monocolor, 1 = multicolor
+unsigned long musicStepMs = 200; // ms per color step in multicolor mode
+int musicHue = 0;
+unsigned long lastMusicStepTime = 0;
+
+// ===============================
 // VARIABLES DE COLOR MANUAL
 // ===============================
 int redVal = 0, greenVal = 0, blueVal = 0;
@@ -209,6 +217,25 @@ void applyRainbowColor(int hue) {
   ledcWrite(redChannel, rv);
   ledcWrite(greenChannel, gv);
   ledcWrite(blueChannel, bv);
+}
+
+// Helper: convert HSV hue (0-359) to RGB ints (0-255)
+void hsvHueToRgbInt(int hue, int &outR, int &outG, int &outB, float brightness=1.0f) {
+  float r,g,b;
+  int region = hue / 60;
+  float f = (hue / 60.0) - region;
+  float q = 1 - f;
+  switch(region) {
+    case 0: r=1; g=f; b=0; break;
+    case 1: r=q; g=1; b=0; break;
+    case 2: r=0; g=1; b=f; break;
+    case 3: r=0; g=q; b=1; break;
+    case 4: r=f; g=0; b=1; break;
+    default: r=1; g=0; b=q; break;
+  }
+  outR = (int)constrain(r * 255.0 * brightness, 0, pwmMax);
+  outG = (int)constrain(g * 255.0 * brightness, 0, pwmMax);
+  outB = (int)constrain(b * 255.0 * brightness, 0, pwmMax);
 }
 
 // ===============================
@@ -359,6 +386,38 @@ void setup() {
       server.send(200, "application/json", payload);
     });
 
+    // Set music submode (mono|multi)
+    server.on("/setMusicSubmode", HTTP_GET, []() {
+      if (server.hasArg("m")) {
+        String m = server.arg("m");
+        if (m == "mono") musicSubmode = 0;
+        else if (m == "multi") musicSubmode = 1;
+        Serial.print("Music submode: "); Serial.println(m);
+      }
+      server.send(200, "text/plain", "OK");
+    });
+
+    // Set multicolor step duration (ms)
+    server.on("/setMusicStep", HTTP_GET, []() {
+      if (server.hasArg("value")) {
+        unsigned long v = server.arg("value").toInt();
+        if (v < 5) v = 5;
+        if (v > 60000) v = 60000;
+        musicStepMs = v;
+        Serial.print("Music step ms: "); Serial.println(musicStepMs);
+      }
+      server.send(200, "text/plain", "OK");
+    });
+
+    // Get music config (submode + step) for UI prefill
+    server.on("/getMusicConfig", HTTP_GET, []() {
+      String payload = "{";
+      payload += "\"submode\":" + String(musicSubmode) + ",";
+      payload += "\"stepMs\":" + String(musicStepMs);
+      payload += "}";
+      server.send(200, "application/json", payload);
+    });
+
   // Ajustar velocidad del arcoíris (ms entre pasos)
   server.on("/setRainbowSpeed", HTTP_GET, []() {
     if (server.hasArg("value")) {
@@ -394,6 +453,18 @@ void loop() {
   server.handleClient();
 
   if (musicMode) {
+    // update multicolor hue over time if needed
+    unsigned long currentMillis = millis();
+    if (musicSubmode == 1) {
+      if (currentMillis - lastMusicStepTime > musicStepMs) {
+        lastMusicStepTime = currentMillis;
+        musicHue = (musicHue + 1) % 360;
+        // update music color variables from hue (do not write LEDs here)
+        int r,g,b;
+        hsvHueToRgbInt(musicHue, r, g, b, rainbowBrightness);
+        musicRed = r; musicGreen = g; musicBlue = b;
+      }
+    }
     detectBeatAndReact();
   }
   else if (rainbowMode) {
