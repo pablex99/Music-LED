@@ -189,23 +189,72 @@ footer {
 }
 
 /* Make sure range inputs are reachable and sized consistently */
-#rainbowSection input[type="range"], #beatSection input[type="range"] {
+#rainbowSection input[type="range"], #beatSection input[type="range"], #musicStep {
   width: 60%;
   pointer-events: auto;
   z-index: 3;
   -webkit-appearance: none;
   appearance: none;
+  background: rgba(0, 20, 20, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+  height: 8px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), inset 0 0 5px rgba(0, 255, 255, 0.1);
 }
 
-/* Small visual tweaks for the native range thumb on WebKit */
+/* Track styling for Firefox */
+#rainbowSection input[type="range"]::-moz-range-track,
+#beatSection input[type="range"]::-moz-range-track,
+#musicStep::-moz-range-track {
+  background: rgba(0, 20, 20, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+  height: 8px;
+}
+
+/* Thumb styling for WebKit (Chrome, Safari, Edge) */
 #rainbowSection input[type="range"]::-webkit-slider-thumb,
-#beatSection input[type="range"]::-webkit-slider-thumb {
+#beatSection input[type="range"]::-webkit-slider-thumb,
+#musicStep::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: #1abc9c;
-  border: 2px solid #04111a;
+  background: #00ffff;
+  border: 2px solid rgba(0, 100, 100, 0.8);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), inset 0 0 5px rgba(0, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#rainbowSection input[type="range"]::-webkit-slider-thumb:hover,
+#beatSection input[type="range"]::-webkit-slider-thumb:hover,
+#musicStep::-webkit-slider-thumb:hover {
+  background: #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 1), inset 0 0 10px rgba(0, 255, 255, 0.5);
+  transform: scale(1.2);
+}
+
+/* Thumb styling for Firefox */
+#rainbowSection input[type="range"]::-moz-range-thumb,
+#beatSection input[type="range"]::-moz-range-thumb,
+#musicStep::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00ffff;
+  border: 2px solid rgba(0, 100, 100, 0.8);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#rainbowSection input[type="range"]::-moz-range-thumb:hover,
+#beatSection input[type="range"]::-moz-range-thumb:hover,
+#musicStep::-moz-range-thumb:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+  transform: scale(1.2);
 }
 
 /* Background options: swap classes on <body> to try different backgrounds */
@@ -347,3 +396,124 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 
 /* Ensure the wheel stays centered (manual & music) */
 #colorWheel { margin-left: auto; margin-right: auto; }
+
+/* Welcome section - shown by default when no mode is selected */
+#welcomeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Animated LED icon */
+.led-icon {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.led-bulb {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #00ffff 0%, rgba(0, 255, 255, 0.4) 50%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 30px rgba(0, 255, 255, 0.8),
+    0 0 60px rgba(0, 255, 255, 0.4),
+    inset 0 0 20px rgba(0, 255, 255, 0.3);
+  animation: ledPulse 2s ease-in-out infinite;
+}
+
+.led-rays {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(0deg, transparent 40%, rgba(0, 255, 255, 0.3) 50%, transparent 60%),
+    linear-gradient(90deg, transparent 40%, rgba(0, 255, 255, 0.3) 50%, transparent 60%),
+    linear-gradient(45deg, transparent 40%, rgba(0, 255, 255, 0.2) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(0, 255, 255, 0.2) 50%, transparent 60%);
+  animation: raysRotate 4s linear infinite;
+}
+
+@keyframes ledPulse {
+  0%, 100% { 
+    box-shadow: 
+      0 0 30px rgba(0, 255, 255, 0.8),
+      0 0 60px rgba(0, 255, 255, 0.4),
+      inset 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  50% { 
+    box-shadow: 
+      0 0 50px rgba(0, 255, 255, 1),
+      0 0 90px rgba(0, 255, 255, 0.6),
+      inset 0 0 30px rgba(0, 255, 255, 0.5);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes raysRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.welcome-text {
+  color: #00ffff;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); }
+  50% { text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.6); }
+}
+
+.tech-divider {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.tech-divider span {
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+  animation: dividerPulse 2s ease-in-out infinite;
+}
+
+.tech-divider span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.tech-divider span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes dividerPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; box-shadow: 0 0 10px rgba(0, 255, 255, 1); }
+}
+
+/* Hide welcome when a mode is active */
+body.music-active #welcomeSection,
+body.manual-active #welcomeSection,
+body.rainbow-active #welcomeSection {
+  display: none;
+}
