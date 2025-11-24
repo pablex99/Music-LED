@@ -59,9 +59,15 @@ WebServer server(80);
 // ===============================
 // VARIABLES PARA DETECCIÓN DE BEAT
 // ===============================
-double prevLowEnergy = 0;
+// spectral flux based beat detection
+double prevLowEnergy = 0; // kept for compatibility with older logic
 double avgLowEnergy = 0;
 const double smoothingFactor = 0.9;
+// New spectral-flux variables
+double prevMag[samples/2];
+double avgFlux = 0.0;
+const double fluxSmoothing = 0.85; // smoothing for the moving average of flux
+float beatSensitivity = 1.6; // multiplier: flux > avgFlux * beatSensitivity -> beat
 unsigned long lastBeatTime = 0;
 const int beatHoldTime = 150; // ms
 double beatThreshold = 400.0;
@@ -131,40 +137,46 @@ void detectBeatAndReact() {
   if (now - lastSampleTime < (1000000.0 / samplingFrequency)) return;
   lastSampleTime = now;
 
-  // Lectura y procesamiento de muestras de audio
+  // Lectura y procesamiento de muestras de audio (captura en vReal)
   double avg = 0;
   for (int i = 0; i < samples; i++) {
     vReal[i] = analogRead(micPin);
     avg += vReal[i];
     vImag[i] = 0;
-    delayMicroseconds(50); // evita saturar ADC
+    delayMicroseconds(50);
   }
 
   avg /= samples;
   for (int i = 0; i < samples; i++) {
-    vReal[i] -= avg;
-    if (vReal[i] < 60) vReal[i] = 0; // ignora ruido
+    vReal[i] -= avg; // quitar DC
+    // no clip here; let FFT handle small values
   }
 
   // Análisis FFT
   FFT.windowing(FFT_WIN_TYP_HAMMING, FFT_FORWARD);
   FFT.compute(FFT_FORWARD);
-  FFT.complexToMagnitude();
+  FFT.complexToMagnitude(); // ahora vReal contiene magnitudes
 
-  // Cálculo de energía en bajas frecuencias (20-120 Hz)
-  double lowEnergy = 0;
-  for (int i = 2; i < samples / 2; i++) {
-    double freq = i * (samplingFrequency / samples);
-    if (freq >= 20 && freq <= 120) lowEnergy += vReal[i];
+  // Spectral flux: suma de aumentos positivos entre frames en banda baja
+  double flux = 0.0;
+  int lowBin = 2; // bin 2 ~ (2 * fs / N)
+  int highBin = samples / 8; // limitarnos a bajas-medias frecuencias
+  if (highBin >= samples/2) highBin = samples/2 - 1;
+
+  for (int i = lowBin; i <= highBin; i++) {
+    double mag = vReal[i];
+    double diff = mag - prevMag[i];
+    if (diff > 0) flux += diff;
+    prevMag[i] = mag;
   }
 
-  // Detección de beat
-  avgLowEnergy = smoothingFactor * avgLowEnergy + (1.0 - smoothingFactor) * lowEnergy;
-  bool beatDetected = (lowEnergy - prevLowEnergy) > beatThreshold;
-  prevLowEnergy = lowEnergy;
+  // Mantenemos promedio suavizado de flux
+  avgFlux = fluxSmoothing * avgFlux + (1.0 - fluxSmoothing) * flux;
 
-  // Reacción al beat
-  if (beatDetected && millis() - lastBeatTime > beatHoldTime) {
+  // Detectar beat usando umbral adaptativo basado en avgFlux
+  bool beatDetected = false;
+  if (avgFlux > 0.0 && flux > (avgFlux * beatSensitivity) && (millis() - lastBeatTime > beatHoldTime)) {
+    beatDetected = true;
     lastBeatTime = millis();
     // Aplicar color seleccionado para modo música
     int rv = constrain(musicRed, 0, pwmMax);
@@ -173,8 +185,13 @@ void detectBeatAndReact() {
     ledcWrite(redChannel, rv);
     ledcWrite(greenChannel, gv);
     ledcWrite(blueChannel, bv);
+  }
+
+  // Reacción al beat (color elegido) o desvanecimiento
+  if (beatDetected) {
+    // already wrote the chosen music color above
   } else {
-    // Desvanecimiento suave
+    // desvanecimiento suave basado en tiempo desde el último beat
     int fade = map(millis() - lastBeatTime, 0, beatHoldTime, 255, 0);
     fade = constrain(fade, 0, 255);
     // desvanecer desde el color de música hacia apagado

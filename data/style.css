@@ -221,7 +221,19 @@ body.music-active #modesSection, body.music-active #musicSubmodeSection, body.mu
 body.music-active #modesSection button, body.music-active #musicSubmodeSection button { margin: 4px; }
 
 /* Make the color wheel centered and smaller in music mode */
-body.music-active #colorWheel { width: 140px; margin: 8px auto; }
+body.music-active #colorWheel { 
+  width: 140px; 
+  margin: 8px auto;
+  display: block;
+  position: relative;
+  left: -20px; /* shift left to visually center with button */
+}
+
+/* Center apply button under the wheel in music mode */
+body.music-active #applyColorBtn {
+  display: block;
+  margin: 8px auto;
+}
 
 /* Ensure sliders and labels are centered and not too wide */
 body.music-active input[type="range"] { width: 60%; }
