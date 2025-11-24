@@ -158,14 +158,25 @@ void detectBeatAndReact() {
   // Reacción al beat
   if (beatDetected && millis() - lastBeatTime > beatHoldTime) {
     lastBeatTime = millis();
-    ledcWrite(blueChannel, 255); // azul destello
-    ledcWrite(greenChannel, 0);
-    ledcWrite(redChannel, 0);
+    // Aplicar color seleccionado para modo música
+    int rv = constrain(musicRed, 0, pwmMax);
+    int gv = constrain(musicGreen, 0, pwmMax);
+    int bv = constrain(musicBlue, 0, pwmMax);
+    ledcWrite(redChannel, rv);
+    ledcWrite(greenChannel, gv);
+    ledcWrite(blueChannel, bv);
   } else {
     // Desvanecimiento suave
     int fade = map(millis() - lastBeatTime, 0, beatHoldTime, 255, 0);
     fade = constrain(fade, 0, 255);
-    ledcWrite(blueChannel, fade);
+    // desvanecer desde el color de música hacia apagado
+    float f = fade / 255.0;
+    int rv = (int)constrain(musicRed * f, 0, pwmMax);
+    int gv = (int)constrain(musicGreen * f, 0, pwmMax);
+    int bv = (int)constrain(musicBlue * f, 0, pwmMax);
+    ledcWrite(redChannel, rv);
+    ledcWrite(greenChannel, gv);
+    ledcWrite(blueChannel, bv);
   }
 }
 
