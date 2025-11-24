@@ -146,7 +146,7 @@ function setMode(mode){
       var beat = document.getElementById('beatSection');
       var rainbow = document.getElementById('rainbowSection');
       if (mode === 'manual') {
-        if (manual) manual.style.display = 'flex';
+        if (manual) { manual.style.display = 'flex'; manual.querySelector('h3').textContent = 'Control Manual'; }
         if (beat) beat.style.display = 'none';
         if (rainbow) rainbow.style.display = 'none';
         // initialize color picker only when user requests manual mode
@@ -158,7 +158,7 @@ function setMode(mode){
             if (btn) { btn.textContent = 'Aplicar color'; btn.onclick = applySelectedColor; }
             var sub = document.getElementById('musicSubmodeSection'); if (sub) sub.style.display = 'none';
       } else if (mode === 'music') {
-            if (manual) manual.style.display = 'flex';
+            if (manual) { manual.style.display = 'flex'; manual.querySelector('h3').textContent = 'Control Monocolor'; }
             if (beat) beat.style.display = 'block';
             if (rainbow) rainbow.style.display = 'none';
             // initialize color picker when opening music mode so user can pick the blink color
@@ -180,7 +180,7 @@ function setMode(mode){
             }
             // make apply button set music color instead of manual color
             var btn2 = document.getElementById('applyColorBtn');
-            if (btn2) { btn2.textContent = 'Establecer color (modo Música)'; btn2.onclick = applyMusicColor; }
+            if (btn2) { btn2.textContent = 'Aplicar color'; btn2.onclick = applyMusicColor; }
             // prefill music-specific controls (submode, step, color)
             prefillMusicControls();
             var sub = document.getElementById('musicSubmodeSection'); if (sub) sub.style.display = 'flex';
