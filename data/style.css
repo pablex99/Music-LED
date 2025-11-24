@@ -415,59 +415,306 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   gap: 20px;
 }
 
-/* Animated LED icon */
+/* Pioneer DDJ-400 Style Controller */
 .led-icon {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 320px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Main controller body - expanded for more space */
 .led-bulb {
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle, #00ffff 0%, rgba(0, 255, 255, 0.4) 50%, transparent 70%);
+  width: 300px;
+  height: 170px;
+  background: 
+    linear-gradient(180deg, rgba(20, 20, 25, 0.98) 0%, rgba(10, 10, 15, 0.98) 100%);
+  border: 3px solid rgba(0, 255, 255, 0.6);
+  border-radius: 6px;
+  box-shadow: 
+    0 0 35px rgba(0, 255, 255, 0.5),
+    inset 0 0 30px rgba(0, 255, 255, 0.08),
+    0 6px 25px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 2;
+  animation: controllerGlow 3s ease-in-out infinite;
+}
+
+/* Left jog wheel */
+.led-bulb::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 25px;
+  left: 35px;
+  background: 
+    radial-gradient(circle at center, 
+      rgba(0, 255, 255, 0.9) 0%, 
+      rgba(0, 255, 255, 0.7) 2%, 
+      rgba(0, 200, 200, 0.3) 2%,
+      rgba(0, 150, 150, 0.2) 20%,
+      rgba(20, 20, 30, 0.9) 22%,
+      rgba(15, 15, 20, 0.95) 100%);
+  border: 3px solid rgba(0, 255, 255, 0.7);
   border-radius: 50%;
   box-shadow: 
-    0 0 30px rgba(0, 255, 255, 0.8),
-    0 0 60px rgba(0, 255, 255, 0.4),
-    inset 0 0 20px rgba(0, 255, 255, 0.3);
-  animation: ledPulse 2s ease-in-out infinite;
+    0 0 25px rgba(0, 255, 255, 0.6),
+    inset 0 0 20px rgba(0, 255, 255, 0.15),
+    inset 0 0 8px rgba(0, 0, 0, 0.6);
+  animation: jogWheelSpin 4s linear infinite;
 }
 
+/* Right jog wheel */
+.led-bulb::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 25px;
+  right: 35px;
+  background: 
+    radial-gradient(circle at center, 
+      rgba(0, 255, 255, 0.9) 0%, 
+      rgba(0, 255, 255, 0.7) 2%, 
+      rgba(0, 200, 200, 0.3) 2%,
+      rgba(0, 150, 150, 0.2) 20%,
+      rgba(20, 20, 30, 0.9) 22%,
+      rgba(15, 15, 20, 0.95) 100%);
+  border: 3px solid rgba(0, 255, 255, 0.7);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 25px rgba(0, 255, 255, 0.6),
+    inset 0 0 20px rgba(0, 255, 255, 0.15),
+    inset 0 0 8px rgba(0, 0, 0, 0.6);
+  animation: jogWheelSpin 4s linear infinite reverse;
+}
+
+/* Left pads grid - 2 rows x 4 columns below left jog wheel */
 .led-rays {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 80px;
+  height: 40px;
+  bottom: 18px;
+  left: 35px;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 16px);
+  grid-template-rows: repeat(2, 16px);
+  gap: 4px;
   background: 
-    linear-gradient(0deg, transparent 40%, rgba(0, 255, 255, 0.3) 50%, transparent 60%),
-    linear-gradient(90deg, transparent 40%, rgba(0, 255, 255, 0.3) 50%, transparent 60%),
-    linear-gradient(45deg, transparent 40%, rgba(0, 255, 255, 0.2) 50%, transparent 60%),
-    linear-gradient(-45deg, transparent 40%, rgba(0, 255, 255, 0.2) 50%, transparent 60%);
-  animation: raysRotate 4s linear infinite;
+    /* Row 1 - Square pads */
+    linear-gradient(rgba(0, 255, 100, 0.6), rgba(0, 255, 100, 0.6)) 0 0 / 16px 16px no-repeat,
+    linear-gradient(rgba(255, 100, 0, 0.6), rgba(255, 100, 0, 0.6)) 20px 0 / 16px 16px no-repeat,
+    linear-gradient(rgba(0, 150, 255, 0.6), rgba(0, 150, 255, 0.6)) 40px 0 / 16px 16px no-repeat,
+    linear-gradient(rgba(255, 0, 150, 0.6), rgba(255, 0, 150, 0.6)) 60px 0 / 16px 16px no-repeat,
+    /* Row 2 - Square pads */
+    linear-gradient(rgba(255, 255, 0, 0.6), rgba(255, 255, 0, 0.6)) 0 20px / 16px 16px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 0.6), rgba(0, 255, 255, 0.6)) 20px 20px / 16px 16px no-repeat,
+    linear-gradient(rgba(255, 0, 255, 0.6), rgba(255, 0, 255, 0.6)) 40px 20px / 16px 16px no-repeat,
+    linear-gradient(rgba(150, 255, 0, 0.6), rgba(150, 255, 0, 0.6)) 60px 20px / 16px 16px no-repeat;
+  animation: padsGlow 1.8s ease-in-out infinite;
 }
 
-@keyframes ledPulse {
+/* Right pads grid - 2 rows x 4 columns below right jog wheel */
+.led-rays::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  bottom: 0;
+  left: 170px;
+  background: 
+    /* Row 1 - Square pads */
+    linear-gradient(rgba(255, 100, 100, 0.6), rgba(255, 100, 100, 0.6)) 0 0 / 16px 16px no-repeat,
+    linear-gradient(rgba(100, 255, 100, 0.6), rgba(100, 255, 100, 0.6)) 20px 0 / 16px 16px no-repeat,
+    linear-gradient(rgba(100, 100, 255, 0.6), rgba(100, 100, 255, 0.6)) 40px 0 / 16px 16px no-repeat,
+    linear-gradient(rgba(255, 200, 0, 0.6), rgba(255, 200, 0, 0.6)) 60px 0 / 16px 16px no-repeat,
+    /* Row 2 - Square pads */
+    linear-gradient(rgba(0, 200, 200, 0.6), rgba(0, 200, 200, 0.6)) 0 20px / 16px 16px no-repeat,
+    linear-gradient(rgba(200, 0, 200, 0.6), rgba(200, 0, 200, 0.6)) 20px 20px / 16px 16px no-repeat,
+    linear-gradient(rgba(200, 200, 0, 0.6), rgba(200, 200, 0, 0.6)) 40px 20px / 16px 16px no-repeat,
+    linear-gradient(rgba(0, 255, 150, 0.6), rgba(0, 255, 150, 0.6)) 60px 20px / 16px 16px no-repeat;
+  animation: padsGlow 1.8s ease-in-out infinite 0.9s;
+}
+
+/* Crossfader rail at bottom - aligned with second row */
+.led-icon::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 8px;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 15, 20, 0.9);
+  border: 2px solid rgba(0, 255, 255, 0.5);
+  border-radius: 4px;
+  box-shadow: 
+    0 0 8px rgba(0, 255, 255, 0.4),
+    inset 0 0 5px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+}
+
+/* Crossfader handle - moves within rail boundaries */
+.led-icon::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 10px;
+  bottom: 25px;
+  left: calc(50% - 16px);
+  background: linear-gradient(180deg, rgba(0, 255, 255, 0.95) 0%, rgba(0, 200, 200, 0.9) 100%);
+  border: 1px solid rgba(0, 255, 255, 1);
+  border-radius: 2px;
+  box-shadow: 
+    0 0 12px rgba(0, 255, 255, 0.9),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+  z-index: 4;
+  animation: crossfaderMove 5s ease-in-out infinite;
+}
+
+@keyframes controllerGlow {
   0%, 100% { 
     box-shadow: 
-      0 0 30px rgba(0, 255, 255, 0.8),
-      0 0 60px rgba(0, 255, 255, 0.4),
-      inset 0 0 20px rgba(0, 255, 255, 0.3);
+      0 0 35px rgba(0, 255, 255, 0.5),
+      inset 0 0 30px rgba(0, 255, 255, 0.08),
+      0 6px 25px rgba(0, 0, 0, 0.7);
   }
   50% { 
     box-shadow: 
-      0 0 50px rgba(0, 255, 255, 1),
-      0 0 90px rgba(0, 255, 255, 0.6),
-      inset 0 0 30px rgba(0, 255, 255, 0.5);
-    transform: scale(1.05);
+      0 0 45px rgba(0, 255, 255, 0.7),
+      inset 0 0 35px rgba(0, 255, 255, 0.12),
+      0 6px 30px rgba(0, 0, 0, 0.8);
   }
 }
 
-@keyframes raysRotate {
+@keyframes jogWheelSpin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes crossfaderMove {
+  0%, 100% { 
+    left: calc(50% - 16px);
+  }
+  50% { 
+    left: calc(50% + 8px);
+  }
+}
+
+@keyframes padsLightShow {
+  0% {
+    box-shadow: 
+      inset 0 0 0 2px rgba(255, 0, 0, 0.9),
+      inset 20px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 0 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 20px 0 1px rgba(80, 80, 80, 0.5),
+      0 0 15px rgba(255, 0, 0, 0.8);
+  }
+  12.5% {
+    box-shadow: 
+      inset 0 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 0 0 2px rgba(0, 100, 255, 0.9),
+      inset 60px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 0 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 20px 0 1px rgba(80, 80, 80, 0.5),
+      40px 0 15px rgba(0, 100, 255, 0.8);
+  }
+  25% {
+    box-shadow: 
+      inset 0 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 0 20px 0 2px rgba(255, 220, 0, 0.9),
+      inset 20px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 20px 0 1px rgba(80, 80, 80, 0.5),
+      0 20px 15px rgba(255, 220, 0, 0.8);
+  }
+  37.5% {
+    box-shadow: 
+      inset 0 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 0 0 2px rgba(255, 0, 0, 0.9),
+      inset 40px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 0 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 20px 0 1px rgba(80, 80, 80, 0.5),
+      20px 0 15px rgba(255, 0, 0, 0.8);
+  }
+  50% {
+    box-shadow: 
+      inset 0 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 0 0 2px rgba(0, 100, 255, 0.9),
+      inset 0 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 20px 0 1px rgba(80, 80, 80, 0.5),
+      60px 0 15px rgba(0, 100, 255, 0.8);
+  }
+  62.5% {
+    box-shadow: 
+      inset 0 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 0 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 20px 0 2px rgba(255, 220, 0, 0.9),
+      inset 40px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 20px 0 1px rgba(80, 80, 80, 0.5),
+      20px 20px 15px rgba(255, 220, 0, 0.8);
+  }
+  75% {
+    box-shadow: 
+      inset 0 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 0 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 20px 0 2px rgba(255, 0, 0, 0.9),
+      inset 60px 20px 0 1px rgba(80, 80, 80, 0.5),
+      40px 20px 15px rgba(255, 0, 0, 0.8);
+  }
+  87.5% {
+    box-shadow: 
+      inset 0 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 0 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 20px 0 2px rgba(0, 100, 255, 0.9),
+      60px 20px 15px rgba(0, 100, 255, 0.8);
+  }
+  100% {
+    box-shadow: 
+      inset 0 0 0 2px rgba(255, 0, 0, 0.9),
+      inset 20px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 0 0 1px rgba(80, 80, 80, 0.5),
+      inset 0 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 20px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 40px 20px 0 1px rgba(80, 80, 80, 0.5),
+      inset 60px 20px 0 1px rgba(80, 80, 80, 0.5),
+      0 0 15px rgba(255, 0, 0, 0.8);
+  }
 }
 
 .welcome-text {
