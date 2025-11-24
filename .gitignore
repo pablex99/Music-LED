@@ -1,0 +1,23 @@
+# PlatformIO build artifacts
+.pio/
+.pioenvs/
+.pio/build/
+lib/.cache/
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Python virtual envs
+env/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Serial monitor logs / temporary files
+*.log
+
+# Do NOT commit local secrets
+src/secrets.h

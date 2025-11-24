@@ -1,0 +1,155 @@
+body {
+  background: linear-gradient(135deg, #141E30, #243B55);
+  color: white;
+  /* Use Press Start 2P (retro) with monospace fallback */
+  font-family: 'Press Start 2P', monospace;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+h2 { margin-top: 0; }
+.slider {
+  width: 80%;
+  margin: 10px;
+}
+button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  /* ensure buttons use the chosen font */
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  line-height: 1;
+}
+button:hover {
+  background-color: #666;
+}
+button:active { transform: translateY(1px); }
+.colorBtn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* modo activo */
+.modeBtn.active {
+  background-color: #1abc9c;
+  color: #04111a;
+  transform: scale(1.03);
+}
+.modeBtn { margin: 6px; font-family: 'Press Start 2P', monospace; font-size: 12px; }
+/* Smooth transitions for interactive elements */
+.modeBtn, button, .colorBtn { transition: background 0.12s ease, transform 0.08s ease; }
+
+/* Apply small styling for the feedback message */
+#colorMsg { font-size: 12px; color: #f7b; min-height: 18px; margin-top: 6px; }
+footer {
+  position: fixed;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px; /* reduced size */
+  color: white;
+  opacity: 0.9;
+  padding: 4px 0;
+}
+
+/* Layout tweaks: center the color wheel horizontally and keep it at a consistent height */
+#manualSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically within the section */
+  min-height: 220px; /* controls vertical position - adjust as needed */
+}
+
+#colorWheel {
+  margin: 0 auto; /* ensure centered */
+  width: 200px; /* ensure container matches colorPicker size */
+}
+
+/* Hide interactive controls by default; show them when mode is selected */
+/* hide interactive controls by default; show them when mode is selected */
+#manualSection, #beatSection, #rainbowSection {
+  display: none;
+}
+
+/* Make the beat slider a bit smaller */
+#beatSection input[type="range"] {
+  width: 60%;
+}
+
+#rainbowSection input[type="range"] {
+  width: 60%;
+}
+
+#rainbowSection { display: none; align-items: center; }
+
+/* Ensure rainbow section lays out controls vertically and sliders are interactive */
+#rainbowSection {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+/* Make sure range inputs are reachable and sized consistently */
+#rainbowSection input[type="range"], #beatSection input[type="range"] {
+  width: 60%;
+  pointer-events: auto;
+  z-index: 3;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Small visual tweaks for the native range thumb on WebKit */
+#rainbowSection input[type="range"]::-webkit-slider-thumb,
+#beatSection input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1abc9c;
+  border: 2px solid #04111a;
+}
+
+/* Background options: swap classes on <body> to try different backgrounds */
+:root{
+  --bg-gradientA: linear-gradient(135deg, #141E30, #243B55);
+  --bg-gradientB: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --bg-radial: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03), rgba(0,0,0,0.6));
+}
+
+.bg-default { background: var(--bg-gradientA); }
+.bg-deep { background: var(--bg-gradientB); }
+.bg-radial { background: var(--bg-gradientA), var(--bg-radial); background-blend-mode: overlay; }
+
+/* Animated gradient - subtle moving effect */
+.bg-animated {
+  background: linear-gradient(270deg, #141E30, #243B55, #1b2b44, #0b1220);
+  background-size: 800% 800%;
+  animation: GradientShift 12s ease infinite;
+}
+
+@keyframes GradientShift {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* Small helper: center the whole page content and set a max width */
+.page-wrapper {
+  max-width: 920px;
+  margin: 0 auto;
+}

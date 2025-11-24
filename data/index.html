@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Control RGB WiFi</title>
+  <link rel="stylesheet" href="/style.css">
+  <!-- Google Font: Press Start 2P (retro pixel type) -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h2>Control de Tira RGB WiFi</h2>
+
+  <section id="manualSection">
+    <h3>Control Manual</h3>
+    <div id="colorWheel" style="margin:20px;"></div>
+    <div>
+      <button id="applyColorBtn" onclick="applySelectedColor()">Aplicar color</button>
+    </div>
+    <p id="colorMsg" style="color:#f7b; margin-top:8px; display:block;"></p>
+  </section>
+
+  <section id="beatSection">
+    <h3>🔊 Sensibilidad - Umbral de Beat</h3>
+        <input id="beatSlider" type="range" min="0" max="20000" value="400"
+          oninput="updateBeatDisplay(this.value)">
+    <p>Umbral actual: <span id="beatValDisplay">400</span></p>
+  </section>
+
+  <section id="modesSection">
+    <h3>Modos</h3>
+    <button id="modeManual" class="modeBtn" onclick="setMode('manual')">Manual</button>
+    <button id="modeMusic" class="modeBtn" onclick="setMode('music')">Música</button>
+    <button id="modeRainbow" class="modeBtn" onclick="setMode('rainbow')">Arcoíris</button>
+  </section>
+
+  <section id="rainbowSection">
+    <h3>Arcoíris - Ajustes</h3>
+    <label for="rainSpeed">Velocidad (ms por paso): <span id="rainSpeedVal">30</span> ms</label>
+    <input id="rainSpeed" type="range" min="5" max="1000" value="30" oninput="updateRainbowSpeed(this.value)">
+    <p></p>
+    <label for="rainBrightness">Intensidad (%): <span id="rainBrightVal">100</span>%</label>
+    <input id="rainBrightness" type="range" min="0" max="100" value="100" oninput="updateRainbowBrightness(this.value)">
+  </section>
+
+  <footer>
+    <p>"Que se haga la luz" | -Pablex-</p>
+  </footer>
+
+  <!-- librería iro.js local -->
+  <script src="/iro.min.js"></script>
+  <!-- Tu lógica JS -->
+  <script src="/script.js"></script>
+</body>
+</html>
