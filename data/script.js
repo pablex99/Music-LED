@@ -41,18 +41,21 @@ function initColorPickerSequence() {
   var msgEl = document.getElementById('colorMsg');
   if (msgEl) msgEl.textContent = 'Inicializando rueda de color...';
 
-  initColorPickerIfNeeded().then(() => {
+  // Return the promise so callers can wait until initialization finishes
+  return initColorPickerIfNeeded().then(() => {
     if (msgEl) msgEl.textContent = '';
+    return true;
   }).catch(err => {
     console.warn('No se pudo inicializar iro.js desde /iro.min.js:', err);
     // Try a CDN fallback
     if (msgEl) msgEl.textContent = 'Cargando rueda desde CDN...';
     return loadIroScript('https://cdn.jsdelivr.net/npm/@jaames/iro@5', 5000)
       .then(initColorPickerIfNeeded)
-      .then(() => { if (msgEl) msgEl.textContent = ''; })
+      .then(() => { if (msgEl) msgEl.textContent = ''; return true; })
       .catch(err2 => {
         console.error('Fallo al cargar iro.js desde CDN:', err2);
         if (msgEl) msgEl.textContent = 'Rueda de color no disponible';
+        return false;
       });
   });
 }
@@ -154,7 +157,20 @@ function setMode(mode){
             if (rainbow) rainbow.style.display = 'none';
             // initialize color picker when opening music mode so user can pick the blink color
             if (typeof colorPicker === 'undefined' || !colorPicker) {
-              initColorPickerSequence();
+              initColorPickerSequence().then(ok => {
+                if (ok && typeof colorPicker !== 'undefined' && colorPicker) {
+                  fetch('/getMusicColor')
+                    .then(r => r.json())
+                    .then(j => { try { colorPicker.color.rgb = { r: j.R, g: j.G, b: j.B }; } catch(e){} })
+                    .catch(()=>{});
+                }
+              });
+            } else {
+              // picker already exists: pre-load current music color
+              fetch('/getMusicColor')
+                .then(r => r.json())
+                .then(j => { try { colorPicker.color.rgb = { r: j.R, g: j.G, b: j.B }; } catch(e){} })
+                .catch(()=>{});
             }
             // make apply button set music color instead of manual color
             var btn2 = document.getElementById('applyColorBtn');

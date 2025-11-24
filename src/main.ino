@@ -338,6 +338,16 @@ void setup() {
       server.send(200, "text/plain", "OK");
     });
 
+    // Obtener color actual para modo música (JSON)
+    server.on("/getMusicColor", HTTP_GET, []() {
+      String payload = "{";
+      payload += "\"R\":" + String(musicRed) + ",";
+      payload += "\"G\":" + String(musicGreen) + ",";
+      payload += "\"B\":" + String(musicBlue);
+      payload += "}";
+      server.send(200, "application/json", payload);
+    });
+
   // Ajustar velocidad del arcoíris (ms entre pasos)
   server.on("/setRainbowSpeed", HTTP_GET, []() {
     if (server.hasArg("value")) {
