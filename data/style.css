@@ -495,49 +495,135 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Left pads grid - 2 rows x 4 columns below left jog wheel */
 .led-rays {
   position: absolute;
-  width: 80px;
-  height: 40px;
+  width: 71px;
+  height: 37px;
   bottom: 18px;
   left: 35px;
   z-index: 3;
   display: grid;
-  grid-template-columns: repeat(4, 16px);
-  grid-template-rows: repeat(2, 16px);
-  gap: 4px;
-  background: 
-    /* Row 1 - Square pads */
-    linear-gradient(rgba(0, 255, 100, 0.6), rgba(0, 255, 100, 0.6)) 0 0 / 16px 16px no-repeat,
-    linear-gradient(rgba(255, 100, 0, 0.6), rgba(255, 100, 0, 0.6)) 20px 0 / 16px 16px no-repeat,
-    linear-gradient(rgba(0, 150, 255, 0.6), rgba(0, 150, 255, 0.6)) 40px 0 / 16px 16px no-repeat,
-    linear-gradient(rgba(255, 0, 150, 0.6), rgba(255, 0, 150, 0.6)) 60px 0 / 16px 16px no-repeat,
-    /* Row 2 - Square pads */
-    linear-gradient(rgba(255, 255, 0, 0.6), rgba(255, 255, 0, 0.6)) 0 20px / 16px 16px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 0.6), rgba(0, 255, 255, 0.6)) 20px 20px / 16px 16px no-repeat,
-    linear-gradient(rgba(255, 0, 255, 0.6), rgba(255, 0, 255, 0.6)) 40px 20px / 16px 16px no-repeat,
-    linear-gradient(rgba(150, 255, 0, 0.6), rgba(150, 255, 0, 0.6)) 60px 20px / 16px 16px no-repeat;
+  grid-template-columns: repeat(4, 14px);
+  grid-template-rows: repeat(2, 14px);
+  gap: 3px;
+  background: transparent;
   animation: padsGlow 1.8s ease-in-out infinite;
+}
+
+/* Individual pads with independent borders - left side */
+.led-rays::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    /* Row 1 - Each pad with border using linear-gradient */
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 13px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 255, 100, 0.6), rgba(0, 255, 100, 0.6)) 1px 1px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 30px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(255, 100, 0, 0.6), rgba(255, 100, 0, 0.6)) 18px 1px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 47px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 150, 255, 0.6), rgba(0, 150, 255, 0.6)) 35px 1px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 64px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(255, 0, 150, 0.6), rgba(255, 0, 150, 0.6)) 52px 1px / 12px 12px no-repeat,
+    
+    /* Row 2 */
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 13px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(255, 255, 0, 0.6), rgba(255, 255, 0, 0.6)) 1px 18px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 30px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 0.6), rgba(0, 255, 255, 0.6)) 18px 18px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 47px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(255, 0, 255, 0.6), rgba(255, 0, 255, 0.6)) 35px 18px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 64px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(150, 255, 0, 0.6), rgba(150, 255, 0, 0.6)) 52px 18px / 12px 12px no-repeat;
 }
 
 /* Right pads grid - 2 rows x 4 columns below right jog wheel */
 .led-rays::before {
   content: '';
   position: absolute;
-  width: 80px;
-  height: 40px;
+  width: 71px;
+  height: 37px;
   bottom: 0;
-  left: 170px;
+  left: 180px;
   background: 
-    /* Row 1 - Square pads */
-    linear-gradient(rgba(255, 100, 100, 0.6), rgba(255, 100, 100, 0.6)) 0 0 / 16px 16px no-repeat,
-    linear-gradient(rgba(100, 255, 100, 0.6), rgba(100, 255, 100, 0.6)) 20px 0 / 16px 16px no-repeat,
-    linear-gradient(rgba(100, 100, 255, 0.6), rgba(100, 100, 255, 0.6)) 40px 0 / 16px 16px no-repeat,
-    linear-gradient(rgba(255, 200, 0, 0.6), rgba(255, 200, 0, 0.6)) 60px 0 / 16px 16px no-repeat,
-    /* Row 2 - Square pads */
-    linear-gradient(rgba(0, 200, 200, 0.6), rgba(0, 200, 200, 0.6)) 0 20px / 16px 16px no-repeat,
-    linear-gradient(rgba(200, 0, 200, 0.6), rgba(200, 0, 200, 0.6)) 20px 20px / 16px 16px no-repeat,
-    linear-gradient(rgba(200, 200, 0, 0.6), rgba(200, 200, 0, 0.6)) 40px 20px / 16px 16px no-repeat,
-    linear-gradient(rgba(0, 255, 150, 0.6), rgba(0, 255, 150, 0.6)) 60px 20px / 16px 16px no-repeat;
-  animation: padsGlow 1.8s ease-in-out infinite 0.9s;
+    /* Row 1 - Each pad with border */
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 13px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(255, 100, 100, 0.6), rgba(255, 100, 100, 0.6)) 1px 1px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 30px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(100, 255, 100, 0.6), rgba(100, 255, 100, 0.6)) 18px 1px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 47px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(100, 100, 255, 0.6), rgba(100, 100, 255, 0.6)) 35px 1px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 64px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(255, 200, 0, 0.6), rgba(255, 200, 0, 0.6)) 52px 1px / 12px 12px no-repeat,
+    
+    /* Row 2 */
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 0 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 13px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 200, 200, 0.6), rgba(0, 200, 200, 0.6)) 1px 18px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 17px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 30px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(200, 0, 200, 0.6), rgba(200, 0, 200, 0.6)) 18px 18px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 34px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 47px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(200, 200, 0, 0.6), rgba(200, 200, 0, 0.6)) 35px 18px / 12px 12px no-repeat,
+    
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 51px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)) 64px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 255, 150, 0.6), rgba(0, 255, 150, 0.6)) 52px 18px / 12px 12px no-repeat;
 }
 
 /* Crossfader rail at bottom - aligned with second row */
@@ -577,6 +663,74 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   animation: crossfaderMove 5s ease-in-out infinite;
 }
 
+/* Left channel fader rail */
+.channel-fader-left {
+  position: absolute;
+  width: 5px;
+  height: 35px;
+  bottom: 45px;
+  left: calc(50% - 15px);
+  background: rgba(15, 15, 20, 0.9);
+  border: 2px solid rgba(0, 255, 255, 0.5);
+  border-radius: 3px;
+  box-shadow: 
+    0 0 8px rgba(0, 255, 255, 0.4),
+    inset 0 0 5px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+}
+
+/* Left channel fader handle */
+.channel-fader-left::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 5px;
+  top: 6px;
+  left: -1px;
+  background: linear-gradient(180deg, rgba(0, 255, 255, 0.95) 0%, rgba(0, 200, 200, 0.9) 100%);
+  border: 1px solid rgba(0, 255, 255, 1);
+  border-radius: 2px;
+  box-shadow: 
+    0 0 12px rgba(0, 255, 255, 0.9),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+  animation: channelFaderMoveLeft 4s ease-in-out infinite;
+}
+
+/* Right channel fader rail */
+.channel-fader-right {
+  position: absolute;
+  width: 5px;
+  height: 35px;
+  bottom: 45px;
+  left: calc(50% + 10px);
+  background: rgba(15, 15, 20, 0.9);
+  border: 2px solid rgba(0, 255, 255, 0.5);
+  border-radius: 3px;
+  box-shadow: 
+    0 0 8px rgba(0, 255, 255, 0.4),
+    inset 0 0 5px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+}
+
+/* Right channel fader handle */
+.channel-fader-right::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 5px;
+  top: 20px;
+  left: -1px;
+  background: linear-gradient(180deg, rgba(0, 255, 255, 0.95) 0%, rgba(0, 200, 200, 0.9) 100%);
+  border: 1px solid rgba(0, 255, 255, 1);
+  border-radius: 2px;
+  box-shadow: 
+    0 0 12px rgba(0, 255, 255, 0.9),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+  animation: channelFaderMoveRight 4s ease-in-out infinite 0.5s;
+}
+
 @keyframes controllerGlow {
   0%, 100% { 
     box-shadow: 
@@ -603,6 +757,24 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   }
   50% { 
     left: calc(50% + 8px);
+  }
+}
+
+@keyframes channelFaderMoveLeft {
+  0%, 100% { 
+    top: 6px;
+  }
+  50% { 
+    top: 24px;
+  }
+}
+
+@keyframes channelFaderMoveRight {
+  0%, 100% { 
+    top: 20px;
+  }
+  50% { 
+    top: 4px;
   }
 }
 
