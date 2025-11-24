@@ -75,7 +75,8 @@ footer {
 
 #colorWheel {
   margin: 0 auto; /* ensure centered */
-  width: 200px; /* ensure container matches colorPicker size */
+  display: block;
+  width: 200px; /* default wheel size for manual mode */
 }
 
 /* Hide interactive controls by default; show them when mode is selected */
@@ -153,3 +154,99 @@ footer {
   max-width: 920px;
   margin: 0 auto;
 }
+
+/* Compact styling applied only in Music mode */
+body.music-active {
+  font-size: 12px; /* slightly smaller overall text */
+}
+
+body.music-active #manualSection { min-height: 160px; }
+body.music-active #colorWheel { width: 140px; }
+
+/* Make control buttons smaller and tighter for music mode */
+body.music-active button {
+  padding: 6px 10px;
+  margin: 6px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+body.music-active .modeBtn { margin: 4px; font-size: 11px; }
+
+/* Sliders more compact */
+body.music-active #beatSection input[type="range"],
+body.music-active #rainbowSection input[type="range"],
+body.music-active #musicStep {
+  width: 50%;
+}
+
+/* Reduce headings and spacing for a tidier music UI */
+body.music-active h3 { font-size: 13px; margin: 6px 0; }
+body.music-active h4 { font-size: 11px; margin: 4px 0; }
+
+/* Compact music controls layout */
+body.music-active #musicControls { display: block; margin-top:8px; }
+body.music-active #musicControls div { display: flex; gap:8px; justify-content:center; align-items:center; }
+
+/* Make color message smaller to avoid taking vertical space */
+body.music-active #colorMsg { font-size: 11px; margin-top:4px; }
+
+/* Slightly reduce footer visibility so it doesn't compete */
+body.music-active footer { font-size: 11px; bottom:4px; opacity:0.85; }
+
+/* Order and section styling for music mode to create clear visual groups */
+body.music-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+body.music-active #modesSection { order: 1; display: flex; flex-direction: column; align-items:center; }
+body.music-active #musicSubmodeSection { order: 2; display: flex; flex-direction: column; align-items:center; }
+body.music-active #beatSection { order: 3; display: flex; flex-direction: column; align-items:center; }
+body.music-active #manualSection { order: 4; display: flex; flex-direction: column; align-items:center; }
+
+/* Compact boxed look per section */
+body.music-active #modesSection, body.music-active #musicSubmodeSection, body.music-active #beatSection, body.music-active #manualSection {
+  width: 92%;
+  max-width: 520px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+/* Tighter gaps inside each boxed section */
+body.music-active #modesSection button, body.music-active #musicSubmodeSection button { margin: 4px; }
+
+/* Make the color wheel centered and smaller in music mode */
+body.music-active #colorWheel { width: 140px; margin: 8px auto; }
+
+/* Ensure sliders and labels are centered and not too wide */
+body.music-active input[type="range"] { width: 60%; }
+
+/* A little extra spacing between logical groups */
+body.music-active #modesSection { margin-top: 2px; }
+body.music-active #musicSubmodeSection { margin-top: 6px; }
+body.music-active #beatSection { margin-top: 6px; }
+body.music-active #manualSection { margin-top: 6px; margin-bottom: 8px; }
+
+/* Manual mode: ensure modes appear above the wheel */
+body.manual-active { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+body.manual-active #modesSection { order: 1; display: flex; flex-direction: column; align-items:center; }
+body.manual-active #manualSection { order: 2; display: flex; flex-direction: column; align-items:center; }
+body.manual-active #modesSection, body.manual-active #manualSection {
+  width: 92%; max-width: 520px; background: rgba(255,255,255,0.02); border-radius:8px; padding:8px 12px; box-sizing: border-box;
+}
+
+/* Rainbow mode: modes first, then sliders */
+body.rainbow-active { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+body.rainbow-active #modesSection { order: 1; display: flex; flex-direction: column; align-items:center; }
+body.rainbow-active #rainbowSection { order: 2; display: flex; flex-direction: column; align-items:center; }
+body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
+  width: 92%; max-width: 520px; background: rgba(255,255,255,0.02); border-radius:8px; padding:8px 12px; box-sizing: border-box;
+}
+
+/* Ensure the wheel stays centered (manual & music) */
+#colorWheel { margin-left: auto; margin-right: auto; }

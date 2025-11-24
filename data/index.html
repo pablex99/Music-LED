@@ -13,7 +13,7 @@
 
   <section id="manualSection">
     <h3>Control Manual</h3>
-    <div id="colorWheel" style="margin:20px;"></div>
+    <div id="colorWheel"></div>
     <div>
       <button id="applyColorBtn" onclick="applySelectedColor()">Aplicar color</button>
     </div>
@@ -25,6 +25,17 @@
         <input id="beatSlider" type="range" min="0" max="20000" value="400"
           oninput="updateBeatDisplay(this.value)">
     <p>Umbral actual: <span id="beatValDisplay">400</span></p>
+  </section>
+  <section id="musicSubmodeSection" class="music-section" style="display:none;">
+    <h4>Modo Música - Submodo</h4>
+    <div>
+      <button id="musicMonoBtn" onclick="setMusicSubmode('mono')">Monocolor</button>
+      <button id="musicMultiBtn" onclick="setMusicSubmode('multi')">Multicolor</button>
+    </div>
+    <div style="margin-top:8px;">
+      <label for="musicStep">Duración paso multicolor: <span id="musicStepVal">200</span> ms</label>
+      <input id="musicStep" type="range" min="5" max="5000" value="200" oninput="updateMusicStep(this.value)">
+    </div>
   </section>
 
   <section id="modesSection">
