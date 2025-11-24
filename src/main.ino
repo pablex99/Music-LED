@@ -70,6 +70,8 @@ double beatThreshold = 400.0;
 // VARIABLES DE COLOR MANUAL
 // ===============================
 int redVal = 0, greenVal = 0, blueVal = 0;
+// Color para modo música (color que parpadeará cuando se detecte beat)
+int musicRed = 0, musicGreen = 0, musicBlue = 255; // default azul
 
 // NOTE: Web UI files are served from SPIFFS (`data/` folder).
 // The original embedded HTML is removed to keep SPIFFS usage consistent.
@@ -324,6 +326,17 @@ void setup() {
     }
     server.send(200, "text/plain", "OK");
   });
+
+    // Establecer color para modo música
+    server.on("/setMusicColor", HTTP_GET, []() {
+      if (server.hasArg("R") && server.hasArg("G") && server.hasArg("B")) {
+        musicRed = server.arg("R").toInt();
+        musicGreen = server.arg("G").toInt();
+        musicBlue = server.arg("B").toInt();
+        Serial.print("Music color set: "); Serial.print(musicRed); Serial.print(","); Serial.print(musicGreen); Serial.print(","); Serial.println(musicBlue);
+      }
+      server.send(200, "text/plain", "OK");
+    });
 
   // Ajustar velocidad del arcoíris (ms entre pasos)
   server.on("/setRainbowSpeed", HTTP_GET, []() {

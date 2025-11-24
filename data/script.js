@@ -145,10 +145,20 @@ function setMode(mode){
         if (typeof colorPicker === 'undefined' || !colorPicker) {
           initColorPickerSequence();
         }
+            // ensure button applies manual color
+            var btn = document.getElementById('applyColorBtn');
+            if (btn) { btn.textContent = 'Aplicar color'; btn.onclick = applySelectedColor; }
       } else if (mode === 'music') {
-        if (manual) manual.style.display = 'none';
-        if (beat) beat.style.display = 'block';
-        if (rainbow) rainbow.style.display = 'none';
+            if (manual) manual.style.display = 'flex';
+            if (beat) beat.style.display = 'block';
+            if (rainbow) rainbow.style.display = 'none';
+            // initialize color picker when opening music mode so user can pick the blink color
+            if (typeof colorPicker === 'undefined' || !colorPicker) {
+              initColorPickerSequence();
+            }
+            // make apply button set music color instead of manual color
+            var btn2 = document.getElementById('applyColorBtn');
+            if (btn2) { btn2.textContent = 'Establecer color (modo Música)'; btn2.onclick = applyMusicColor; }
       } else if (mode === 'rainbow') {
         if (manual) manual.style.display = 'none';
         if (beat) beat.style.display = 'none';
@@ -211,4 +221,29 @@ function updateRainbowBrightness(v) {
     fetch('/setRainbowBrightness?value=' + encodeURIComponent(v))
       .catch(err => console.log('Error enviando rainbow brightness', err));
   }, 120);
+}
+
+// Enviar color seleccionado para que el modo Música lo use al parpadear
+function applyMusicColor() {
+  var msgEl = document.getElementById('colorMsg');
+  var btn = document.getElementById('applyColorBtn');
+  if (btn) btn.disabled = true;
+  if (!colorPicker) {
+    if (msgEl) msgEl.textContent = 'Rueda no disponible';
+    if (btn) btn.disabled = false;
+    return;
+  }
+  let rgb = colorPicker.color.rgb;
+  if (msgEl) msgEl.textContent = 'Enviando color para modo Música...';
+  fetch(`/setMusicColor?R=${rgb.r}&G=${rgb.g}&B=${rgb.b}`)
+    .then(resp => resp.text())
+    .then(txt => {
+      if (msgEl) msgEl.textContent = 'Color de música establecido';
+      console.log('Respuesta ESP32:', txt);
+      setTimeout(()=>{ if (msgEl) msgEl.textContent = ''; }, 1200);
+    })
+    .catch(err => {
+      if (msgEl) msgEl.textContent = 'Error al enviar color';
+      console.error('Error enviando color de música:', err);
+    }).finally(()=>{ if (btn) btn.disabled = false; });
 }
