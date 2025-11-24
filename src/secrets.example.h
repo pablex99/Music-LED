@@ -4,8 +4,8 @@
 #define SECRETS_H
 
 // WiFi
-const char* WIFI_SSID = "REPLACE_WITH_SSID";
-const char* WIFI_PASS = "REPLACE_WITH_PASSWORD";
+const char* WIFI_SSID = "Vladimir05";
+const char* WIFI_PASS = "Junior25";
 
 // Optional: MQTT / API keys examples
 // const char* MQTT_SERVER = "broker.example.com";
