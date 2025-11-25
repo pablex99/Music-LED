@@ -420,9 +420,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: relative;
   width: 320px;
   height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 1;
 }
 
 /* Main controller body - expanded for more space */
@@ -430,6 +428,13 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   width: 300px;
   height: 170px;
   background: 
+    /* Left side buttons - black circles with very thin silver border */
+    radial-gradient(circle, #000 0%, #000 5px, #c0c0c0 5px, #c0c0c0 5.2px, transparent 6.2px) 16px 120px / 14px 14px no-repeat,
+    radial-gradient(circle, #000 0%, #000 5px, #c0c0c0 5px, #c0c0c0 5.2px, transparent 6.2px) 16px 140px / 14px 14px no-repeat,
+    /* Right side buttons - black circles with very thin silver border */
+    radial-gradient(circle, #000 0%, #000 5px, #c0c0c0 5px, #c0c0c0 5.2px, transparent 6.2px) 178px 120px / 14px 14px no-repeat,
+    radial-gradient(circle, #000 0%, #000 5px, #c0c0c0 5px, #c0c0c0 5.2px, transparent 6.2px) 178px 140px / 14px 14px no-repeat,
+    /* Main body gradient */
     linear-gradient(180deg, rgba(20, 20, 25, 0.98) 0%, rgba(10, 10, 15, 0.98) 100%);
   border: 3px solid rgba(0, 255, 255, 0.6);
   border-radius: 6px;
@@ -437,8 +442,10 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     0 0 35px rgba(0, 255, 255, 0.5),
     inset 0 0 30px rgba(0, 255, 255, 0.08),
     0 6px 25px rgba(0, 0, 0, 0.7);
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  z-index: 1;
   animation: controllerGlow 3s ease-in-out infinite;
 }
 
@@ -573,7 +580,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   width: 71px;
   height: 37px;
   bottom: 0;
-  left: 160px;
+  left: 165px;
   background: 
     /* Row 1 - Each pad with thicker border */
     linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 2px no-repeat,
@@ -681,7 +688,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   width: 65px;
   height: 9px;
   bottom: 57px;
-  left: 175px;
+  left: 180px;
   z-index: 3;
 }
 
@@ -888,9 +895,9 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .knobs-left {
   position: absolute;
   width: 10px;
-  height: 60px;
+  height: 64px;
   bottom: 95px;
-  left: calc(50% - 16px);
+  left: calc(50% - 25px);
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -959,9 +966,9 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .knobs-right {
   position: absolute;
   width: 10px;
-  height: 60px;
+  height: 64px;
   bottom: 95px;
-  left: calc(50% + 8px);
+  left: calc(50% + 17px);
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -999,31 +1006,150 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 0 / 1px 10px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 9px / 10px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 9px 0 / 1px 10px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 6px 1px / 2px 4px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 1px / 2px 4px no-repeat,
     /* Knob 2 borders + indicator */
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 15px / 10px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 15px / 1px 10px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 24px / 10px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 9px 15px / 1px 10px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 6px 16px / 2px 4px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 16px / 2px 4px no-repeat,
     /* Knob 3 borders + indicator */
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 27px / 10px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 27px / 1px 10px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 36px / 10px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 9px 27px / 1px 10px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 6px 28px / 2px 4px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 28px / 2px 4px no-repeat,
     /* Knob 4 borders + indicator */
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 39px / 10px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 39px / 1px 10px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 48px / 10px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 9px 39px / 1px 10px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 6px 40px / 2px 4px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 40px / 2px 4px no-repeat,
     /* Knob 5 borders + indicator */
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 54px / 10px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 54px / 1px 10px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 0 63px / 10px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.7)) 9px 54px / 1px 10px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 6px 55px / 2px 4px no-repeat;
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 55px / 2px 4px no-repeat;
+}
+
+/* Round buttons - visible with text labels */
+.round-buttons-left {
+  position: absolute;
+  left: 29px;
+  top: 137px;
+  z-index: 5;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1.5px solid rgba(80, 80, 80, 0.7);
+  border-radius: 50%;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.round-buttons-right {
+  position: absolute;
+  left: 191px;
+  top: 137px;
+  z-index: 5;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1.5px solid rgba(80, 80, 80, 0.7);
+  border-radius: 50%;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CUE text on top buttons - orange color synchronized with button animation */
+.round-buttons-left::before {
+  content: 'CUE';
+  font-size: 2.5px;
+  font-weight: bold;
+  color: rgba(80, 80, 80, 0.7);
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.2px;
+  animation: textColorOrangeLeft 2s step-end infinite;
+}
+
+.round-buttons-right::before {
+  content: 'CUE';
+  font-size: 2.5px;
+  font-weight: bold;
+  color: rgba(80, 80, 80, 0.7);
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.2px;
+  animation: textColorOrangeRight 2s step-end infinite;
+}
+
+/* Play/Pause button below CUE - green color with full animation */
+.round-buttons-left::after {
+  content: '▶/❚❚';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1.5px solid rgba(80, 80, 80, 0.7);
+  border-radius: 50%;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3px;
+  font-weight: bold;
+  color: rgba(80, 80, 80, 0.7);
+  font-family: Arial, sans-serif;
+  animation: textColorGreenLeft 2.3s step-end infinite;
+}
+
+.round-buttons-right::after {
+  content: '▶/❚❚';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1.5px solid rgba(80, 80, 80, 0.7);
+  border-radius: 50%;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3px;
+  font-weight: bold;
+  color: rgba(80, 80, 80, 0.7);
+  font-family: Arial, sans-serif;
+  animation: textColorGreenRight 2.3s step-end infinite;
+}
+
+/* PLAY / PAUSE labels */
+.cue-label-left,
+.cue-label-right {
+  position: absolute;
+  font-size: 2px;
+  font-weight: bold;
+  color: rgba(160, 160, 160, 0.7);
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.2px;
+  z-index: 2;
+}
+
+.cue-label-left {
+  left: 30px;
+  top: 172px;
+}
+
+.cue-label-right {
+  left: 192px;
+  top: 172px;
 }
 
 @keyframes controllerGlow {
@@ -1039,6 +1165,34 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
       inset 0 0 35px rgba(0, 255, 255, 0.12),
       0 6px 30px rgba(0, 0, 0, 0.8);
   }
+}
+
+
+
+/* Text color animation for left CUE button */
+@keyframes textColorOrangeLeft {
+  0%, 49% { color: rgba(80, 80, 80, 0.7); }
+  50%, 100% { color: rgba(255, 150, 0, 0.95); }
+}
+
+/* Text color animation for right CUE button */
+@keyframes textColorOrangeRight {
+  0%, 49% { color: rgba(255, 150, 0, 0.95); }
+  50%, 100% { color: rgba(80, 80, 80, 0.7); }
+}
+
+
+
+/* Text color animation for green Play/Pause button - left side */
+@keyframes textColorGreenLeft {
+  0%, 49% { color: rgba(0, 255, 100, 0.95); }
+  50%, 100% { color: rgba(80, 80, 80, 0.7); }
+}
+
+/* Text color animation for green Play/Pause button - right side */
+@keyframes textColorGreenRight {
+  0%, 49% { color: rgba(80, 80, 80, 0.7); }
+  50%, 100% { color: rgba(0, 255, 100, 0.95); }
 }
 
 @keyframes jogWheelSpin {
