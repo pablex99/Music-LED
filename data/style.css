@@ -865,7 +865,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Left channel fader rail */
 .channel-fader-left {
   position: absolute;
-  width: 3px;
+  width: 1.5px;
   height: 22px;
   bottom: 36px;
   left: calc(50% - 15px);
@@ -905,10 +905,10 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .channel-fader-left::after {
   content: '';
   position: absolute;
-  width: 5px;
-  height: 3px;
+  width: 10px;
+  height: 1px;
   top: 4px;
-  left: -1px;
+  left: -5px;
   background: linear-gradient(180deg, rgba(0, 255, 255, 0.95) 0%, rgba(0, 200, 200, 0.9) 100%);
   border: 1px solid rgba(0, 255, 255, 1);
   border-radius: 1px;
@@ -922,7 +922,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Right channel fader rail */
 .channel-fader-right {
   position: absolute;
-  width: 3px;
+  width: 1.5px;
   height: 22px;
   bottom: 36px;
   left: calc(50% + 10px);
@@ -962,10 +962,10 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .channel-fader-right::after {
   content: '';
   position: absolute;
-  width: 5px;
-  height: 3px;
+  width: 10px;
+  height: 1px;
   top: 13px;
-  left: -1px;
+  left: -5px;
   background: linear-gradient(180deg, rgba(0, 255, 255, 0.95) 0%, rgba(0, 200, 200, 0.9) 100%);
   border: 1px solid rgba(0, 255, 255, 1);
   border-radius: 1px;
@@ -981,7 +981,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   content: '';
   position: absolute;
   width: 24px;
-  height: 5px;
+  height: 2px;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -998,9 +998,9 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .led-icon::after {
   content: '';
   position: absolute;
-  width: 5px;
-  height: 7px;
-  bottom: 19px;
+  width: 2px;
+  height: 12px;
+  bottom: 15.5px;
   left: calc(50% - 9px);
   background: linear-gradient(180deg, rgba(0, 255, 255, 0.95) 0%, rgba(0, 200, 200, 0.9) 100%);
   border: 1px solid rgba(0, 255, 255, 1);
