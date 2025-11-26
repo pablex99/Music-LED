@@ -639,7 +639,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 65px;
   height: 9px;
-  bottom: 57px;
+  bottom: 64px;
   left: 15px;
   z-index: 3;
 }
@@ -687,7 +687,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 65px;
   height: 9px;
-  bottom: 57px;
+  bottom: 64px;
   left: 180px;
   z-index: 3;
 }
@@ -1036,15 +1036,15 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Round buttons - visible with text labels */
 .round-buttons-left {
   position: absolute;
-  left: 29px;
-  top: 137px;
+  left: 28px;
+  top: 136px;
   z-index: 5;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   background: rgba(0, 0, 0, 0.9);
-  border: 1.5px solid rgba(80, 80, 80, 0.7);
+  border: 1px solid rgba(100, 100, 110, 0.8);
   border-radius: 50%;
-  box-shadow: none;
+  box-shadow: 0 0 2px rgba(100, 100, 110, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1052,15 +1052,15 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 
 .round-buttons-right {
   position: absolute;
-  left: 191px;
-  top: 137px;
+  left: 190px;
+  top: 136px;
   z-index: 5;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   background: rgba(0, 0, 0, 0.9);
-  border: 1.5px solid rgba(80, 80, 80, 0.7);
+  border: 1px solid rgba(100, 100, 110, 0.8);
   border-radius: 50%;
-  box-shadow: none;
+  box-shadow: 0 0 2px rgba(100, 100, 110, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1069,7 +1069,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* CUE text on top buttons - orange color synchronized with button animation */
 .round-buttons-left::before {
   content: 'CUE';
-  font-size: 2.5px;
+  font-size: 3.5px;
   font-weight: bold;
   color: rgba(80, 80, 80, 0.7);
   font-family: Arial, sans-serif;
@@ -1079,7 +1079,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 
 .round-buttons-right::before {
   content: 'CUE';
-  font-size: 2.5px;
+  font-size: 3.5px;
   font-weight: bold;
   color: rgba(80, 80, 80, 0.7);
   font-family: Arial, sans-serif;
@@ -1091,18 +1091,18 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .round-buttons-left::after {
   content: '▶/❚❚';
   position: absolute;
-  top: 20px;
+  top: 21px;
   left: 0;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   background: rgba(0, 0, 0, 0.9);
-  border: 1.5px solid rgba(80, 80, 80, 0.7);
+  border: 1px solid rgba(100, 100, 110, 0.8);
   border-radius: 50%;
-  box-shadow: none;
+  box-shadow: 0 0 2px rgba(100, 100, 110, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3px;
+  font-size: 4px;
   font-weight: bold;
   color: rgba(80, 80, 80, 0.7);
   font-family: Arial, sans-serif;
@@ -1112,18 +1112,18 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .round-buttons-right::after {
   content: '▶/❚❚';
   position: absolute;
-  top: 20px;
+  top: 21px;
   left: 0;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   background: rgba(0, 0, 0, 0.9);
-  border: 1.5px solid rgba(80, 80, 80, 0.7);
+  border: 1px solid rgba(100, 100, 110, 0.8);
   border-radius: 50%;
-  box-shadow: none;
+  box-shadow: 0 0 2px rgba(100, 100, 110, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3px;
+  font-size: 4px;
   font-weight: bold;
   color: rgba(80, 80, 80, 0.7);
   font-family: Arial, sans-serif;
@@ -1143,13 +1143,13 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 }
 
 .cue-label-left {
-  left: 30px;
-  top: 172px;
+  left: 29px;
+  top: 173px;
 }
 
 .cue-label-right {
-  left: 192px;
-  top: 172px;
+  left: 191px;
+  top: 173px;
 }
 
 @keyframes controllerGlow {
@@ -1765,6 +1765,92 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 @keyframes dividerPulse {
   0%, 100% { opacity: 0.5; }
   50% { opacity: 1; box-shadow: 0 0 10px rgba(0, 255, 255, 1); }
+}
+
+/* Search knob - top center position for song browsing */
+.search-knob {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 47px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: 
+    linear-gradient(135deg, rgba(30, 30, 40, 1) 0%, rgba(15, 15, 20, 1) 100%);
+  border: 1px solid rgba(0, 255, 255, 0.7);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 8px rgba(0, 255, 255, 0.5),
+    inset 0 0 4px rgba(0, 0, 0, 0.9),
+    inset 0 1px 2px rgba(0, 255, 255, 0.2);
+  z-index: 6;
+  animation: searchKnobGlow 2.5s ease-in-out infinite;
+}
+
+/* Rotating tick marks on the edge */
+.search-knob::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: 
+    repeating-conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 30deg,
+      rgba(0, 255, 255, 0.4) 30deg,
+      rgba(0, 255, 255, 0.4) 40deg,
+      transparent 40deg,
+      transparent 70deg
+    );
+  animation: searchKnobRotate 5s linear infinite;
+}
+
+/* Center indicator dot */
+.search-knob::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 255, 255, 1);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 4px rgba(0, 255, 255, 1),
+    0 0 2px rgba(255, 255, 255, 0.8);
+  animation: searchKnobDotBlink 1.5s step-end infinite;
+}
+
+@keyframes searchKnobRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes searchKnobGlow {
+  0%, 100% { 
+    border-color: rgba(0, 255, 255, 0.7);
+    box-shadow: 
+      0 0 8px rgba(0, 255, 255, 0.5),
+      inset 0 0 4px rgba(0, 0, 0, 0.9),
+      inset 0 1px 2px rgba(0, 255, 255, 0.2);
+  }
+  50% { 
+    border-color: rgba(0, 255, 255, 1);
+    box-shadow: 
+      0 0 12px rgba(0, 255, 255, 0.8),
+      inset 0 0 6px rgba(0, 0, 0, 0.9),
+      inset 0 1px 3px rgba(0, 255, 255, 0.4);
+  }
+}
+
+@keyframes searchKnobDotBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.3; }
 }
 
 /* Hide welcome when a mode is active */
