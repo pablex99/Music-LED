@@ -429,11 +429,11 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   height: 170px;
   background: 
     /* Left side buttons - reduced black circles with silver border around LED animations */
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 13px 115px / 18px 18px no-repeat,
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 13px 138px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 12.75px 115px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 13.5px 137.275px / 18px 18px no-repeat,
     /* Right side buttons - reduced black circles with silver border around LED animations */
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 177px 115px / 18px 18px no-repeat,
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 177px 137px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 176.85px 115px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 177.8px 137.5px / 18px 18px no-repeat,
     /* Main body gradient */
     linear-gradient(180deg, rgba(20, 20, 25, 0.98) 0%, rgba(10, 10, 15, 0.98) 100%);
   border: 3px solid rgba(0, 255, 255, 0.6);
