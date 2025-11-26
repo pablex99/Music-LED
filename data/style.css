@@ -730,14 +730,102 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   content: '';
 }
 
-/* Round buttons deleted */
+/* Round button left - CUE LED animation (orange) positioned near left pads */
 .round-buttons-left {
-  display: none;
+  position: absolute;
+  left: 40px;
+  top: 80px;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 1px solid rgba(120, 120, 130, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(120, 120, 130, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3px;
+  font-weight: bold;
+  color: rgba(80, 80, 80, 0.7);
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.2px;
+  z-index: 5;
+  animation: textColorOrangeLeft 2s step-end infinite;
 }
 
-/* Round buttons deleted */
+.round-buttons-left::before {
+  content: 'CUE';
+}
+
+/* PLAY/PAUSE LED animation below CUE for left side */
+.round-buttons-left::after {
+  content: '▶/❚❚';
+  position: absolute;
+  top: 22px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 1px solid rgba(120, 120, 130, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(120, 120, 130, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5px;
+  font-weight: bold;
+  color: rgba(80, 80, 80, 0.7);
+  font-family: Arial, sans-serif;
+  animation: textColorGreenLeft 2.3s step-end infinite;
+}
+
+/* Round button right - CUE LED animation (orange) positioned near right pads */
 .round-buttons-right {
-  display: none;
+  position: absolute;
+  left: 204px;
+  top: 80px;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 1px solid rgba(120, 120, 130, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(120, 120, 130, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3px;
+  font-weight: bold;
+  color: rgba(80, 80, 80, 0.7);
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.2px;
+  z-index: 5;
+  animation: textColorOrangeRight 2s step-end infinite;
+}
+
+.round-buttons-right::before {
+  content: 'CUE';
+}
+
+/* PLAY/PAUSE LED animation below CUE for right side */
+.round-buttons-right::after {
+  content: '▶/❚❚';
+  position: absolute;
+  top: 22px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 1px solid rgba(120, 120, 130, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(120, 120, 130, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5px;
+  font-weight: bold;
+  color: rgba(80, 80, 80, 0.7);
+  font-family: Arial, sans-serif;
+  animation: textColorGreenRight 2.3s step-end infinite;
 }
 
 /* Left channel fader rail */
@@ -745,7 +833,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 3px;
   height: 22px;
-  bottom: 45px;
+  bottom: 36px;
   left: calc(50% - 15px);
   background: rgba(15, 15, 20, 0.9);
   border: 2px solid rgba(0, 255, 255, 0.5);
@@ -762,7 +850,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 14px;
   height: 6px;
-  top: -10px;
+  top: -20px;
   left: -5.5px;
   background: rgba(0, 0, 0, 0.9);
   border: 1px solid rgba(80, 80, 80, 0.7);
@@ -802,7 +890,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 3px;
   height: 22px;
-  bottom: 45px;
+  bottom: 36px;
   left: calc(50% + 10px);
   background: rgba(15, 15, 20, 0.9);
   border: 2px solid rgba(0, 255, 255, 0.5);
@@ -819,7 +907,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 14px;
   height: 6px;
-  top: -10px;
+  top: -20px;
   left: -5.5px;
   background: rgba(0, 0, 0, 0.9);
   border: 1px solid rgba(80, 80, 80, 0.7);
@@ -860,7 +948,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 24px;
   height: 5px;
-  bottom: 26px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(15, 15, 20, 0.9);
@@ -878,7 +966,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 5px;
   height: 7px;
-  bottom: 25px;
+  bottom: 19px;
   left: calc(50% - 9px);
   background: linear-gradient(180deg, rgba(0, 255, 255, 0.95) 0%, rgba(0, 200, 200, 0.9) 100%);
   border: 1px solid rgba(0, 255, 255, 1);
@@ -1033,102 +1121,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 55px / 2px 4px no-repeat;
 }
 
-/* Round buttons - visible with text labels */
-.round-buttons-left {
-  position: absolute;
-  left: 28px;
-  top: 136px;
-  z-index: 5;
-  width: 14px;
-  height: 14px;
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid rgba(100, 100, 110, 0.8);
-  border-radius: 50%;
-  box-shadow: 0 0 2px rgba(100, 100, 110, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.round-buttons-right {
-  position: absolute;
-  left: 190px;
-  top: 136px;
-  z-index: 5;
-  width: 14px;
-  height: 14px;
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid rgba(100, 100, 110, 0.8);
-  border-radius: 50%;
-  box-shadow: 0 0 2px rgba(100, 100, 110, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* CUE text on top buttons - orange color synchronized with button animation */
-.round-buttons-left::before {
-  content: 'CUE';
-  font-size: 3.5px;
-  font-weight: bold;
-  color: rgba(80, 80, 80, 0.7);
-  font-family: Arial, sans-serif;
-  letter-spacing: 0.2px;
-  animation: textColorOrangeLeft 2s step-end infinite;
-}
-
-.round-buttons-right::before {
-  content: 'CUE';
-  font-size: 3.5px;
-  font-weight: bold;
-  color: rgba(80, 80, 80, 0.7);
-  font-family: Arial, sans-serif;
-  letter-spacing: 0.2px;
-  animation: textColorOrangeRight 2s step-end infinite;
-}
-
-/* Play/Pause button below CUE - green color with full animation */
-.round-buttons-left::after {
-  content: '▶/❚❚';
-  position: absolute;
-  top: 21px;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid rgba(100, 100, 110, 0.8);
-  border-radius: 50%;
-  box-shadow: 0 0 2px rgba(100, 100, 110, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4px;
-  font-weight: bold;
-  color: rgba(80, 80, 80, 0.7);
-  font-family: Arial, sans-serif;
-  animation: textColorGreenLeft 2.3s step-end infinite;
-}
-
-.round-buttons-right::after {
-  content: '▶/❚❚';
-  position: absolute;
-  top: 21px;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid rgba(100, 100, 110, 0.8);
-  border-radius: 50%;
-  box-shadow: 0 0 2px rgba(100, 100, 110, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4px;
-  font-weight: bold;
-  color: rgba(80, 80, 80, 0.7);
-  font-family: Arial, sans-serif;
-  animation: textColorGreenRight 2.3s step-end infinite;
-}
 
 /* PLAY / PAUSE labels */
 .cue-label-left,
@@ -1144,12 +1137,34 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 
 .cue-label-left {
   left: 29px;
-  top: 173px;
+  top: 176px;
 }
 
 .cue-label-right {
   left: 191px;
-  top: 173px;
+  top: 176px;
+}
+
+/* Fader numbers - silver 1 and 2 below CUE buttons */
+.fader-number-left,
+.fader-number-right {
+  position: absolute;
+  font-size: 4px;
+  font-weight: bold;
+  color: rgba(192, 192, 192, 0.9);
+  text-shadow: 0 0 2px rgba(192, 192, 192, 0.6);
+  font-family: Arial, sans-serif;
+  z-index: 3;
+}
+
+.fader-number-left {
+  left: calc(50% - 13px);
+  top: 132px;
+}
+
+.fader-number-right {
+  left: calc(50% + 12px);
+  top: 132px;
 }
 
 @keyframes controllerGlow {
@@ -1770,9 +1785,9 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Search knob - top center position for song browsing */
 .search-knob {
   position: absolute;
-  width: 12px;
-  height: 12px;
-  top: 47px;
+  width: 10px;
+  height: 10px;
+  top: 25px;
   left: 50%;
   transform: translateX(-50%);
   background: 
@@ -1787,7 +1802,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   animation: searchKnobGlow 2.5s ease-in-out infinite;
 }
 
-/* Rotating tick marks on the edge */
+/* Rotating tick marks on the edge - lines from perimeter to center */
 .search-knob::before {
   content: '';
   position: absolute;
@@ -1797,15 +1812,14 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   left: 0;
   border-radius: 50%;
   background: 
-    repeating-conic-gradient(
-      from 0deg,
-      transparent 0deg,
-      transparent 30deg,
-      rgba(0, 255, 255, 0.4) 30deg,
-      rgba(0, 255, 255, 0.4) 40deg,
-      transparent 40deg,
-      transparent 70deg
-    );
+    linear-gradient(0deg, transparent 0%, transparent 10%, rgba(0, 255, 255, 0.8) 10%, rgba(0, 255, 255, 0.8) 12%, transparent 12%, transparent 50%),
+    linear-gradient(45deg, transparent 0%, transparent 10%, rgba(0, 255, 255, 0.8) 10%, rgba(0, 255, 255, 0.8) 12%, transparent 12%, transparent 50%),
+    linear-gradient(90deg, transparent 0%, transparent 10%, rgba(0, 255, 255, 0.8) 10%, rgba(0, 255, 255, 0.8) 12%, transparent 12%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, transparent 10%, rgba(0, 255, 255, 0.8) 10%, rgba(0, 255, 255, 0.8) 12%, transparent 12%, transparent 50%),
+    linear-gradient(180deg, transparent 0%, transparent 10%, rgba(0, 255, 255, 0.8) 10%, rgba(0, 255, 255, 0.8) 12%, transparent 12%, transparent 50%),
+    linear-gradient(225deg, transparent 0%, transparent 10%, rgba(0, 255, 255, 0.8) 10%, rgba(0, 255, 255, 0.8) 12%, transparent 12%, transparent 50%),
+    linear-gradient(270deg, transparent 0%, transparent 10%, rgba(0, 255, 255, 0.8) 10%, rgba(0, 255, 255, 0.8) 12%, transparent 12%, transparent 50%),
+    linear-gradient(315deg, transparent 0%, transparent 10%, rgba(0, 255, 255, 0.8) 10%, rgba(0, 255, 255, 0.8) 12%, transparent 12%, transparent 50%);
   animation: searchKnobRotate 5s linear infinite;
 }
 
@@ -1824,6 +1838,34 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     0 0 4px rgba(0, 255, 255, 1),
     0 0 2px rgba(255, 255, 255, 0.8);
   animation: searchKnobDotBlink 1.5s step-end infinite;
+}
+
+/* Search button left - rectangular black button next to search knob */
+.search-button-left {
+  position: absolute;
+  width: 8px;
+  height: 4px;
+  top: 27px;
+  left: calc(50% - 30px);
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(80, 80, 80, 0.7);
+  border-radius: 1px;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.8);
+  z-index: 6;
+}
+
+/* Search button right - rectangular black button next to search knob */
+.search-button-right {
+  position: absolute;
+  width: 8px;
+  height: 4px;
+  top: 27px;
+  left: calc(50% + 22px);
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(80, 80, 80, 0.7);
+  border-radius: 1px;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.8);
+  z-index: 6;
 }
 
 @keyframes searchKnobRotate {
