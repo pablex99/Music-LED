@@ -828,6 +828,40 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   animation: textColorGreenRight 2.3s step-end infinite;
 }
 
+/* Square button left - small square button */
+.square-button-left {
+  position: absolute;
+  left: 30px;
+  top: 116px;
+  width: 4px;
+  height: 4px;
+  background: rgba(20, 20, 25, 0.9);
+  border-top: 1px solid rgba(100, 100, 110, 0.8);
+  border-right: 2px solid rgba(100, 100, 110, 0.8);
+  border-bottom: 1px solid rgba(100, 100, 110, 0.8);
+  border-left: 2px solid rgba(100, 100, 110, 0.8);
+  border-radius: 0.5px;
+  box-shadow: 0 0 1px rgba(100, 100, 110, 0.4);
+  z-index: 9;
+}
+
+/* Square button right - small square button */
+.square-button-right {
+  position: absolute;
+  left: 194px;
+  top: 116px;
+  width: 4px;
+  height: 4px;
+  background: rgba(20, 20, 25, 0.9);
+  border-top: 1px solid rgba(100, 100, 110, 0.8);
+  border-right: 2px solid rgba(100, 100, 110, 0.8);
+  border-bottom: 1px solid rgba(100, 100, 110, 0.8);
+  border-left: 2px solid rgba(100, 100, 110, 0.8);
+  border-radius: 0.5px;
+  box-shadow: 0 0 1px rgba(100, 100, 110, 0.4);
+  z-index: 9;
+}
+
 /* Left channel fader rail */
 .channel-fader-left {
   position: absolute;
