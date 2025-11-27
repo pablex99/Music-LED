@@ -560,54 +560,54 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   height: 100%;
   background: 
     /* Row 1 - Each pad with animated red glowing borders */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 12px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 12px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 2px 2px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 13px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 1px 1px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 12px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 29px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 19px 2px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 30px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 18px 1px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 12px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 46px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 36px 2px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 47px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 35px 1px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 12px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 63px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 53px 2px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 64px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 52px 1px / 12px 12px no-repeat,
     
     /* Row 2 */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 17px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 29px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 12px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 2px 19px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 13px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 1px 18px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 17px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 29px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 29px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 19px 19px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 30px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 18px 18px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 17px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 29px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 46px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 36px 19px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 47px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 35px 18px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 17px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 29px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 63px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 53px 19px / 10px 10px no-repeat;
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 64px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 52px 18px / 12px 12px no-repeat;
   animation: padsRedGlowLeft 4s ease-in-out infinite;
 }
 
@@ -621,54 +621,54 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   left: 165px;
   background: 
     /* Row 1 - Each pad with thicker border */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 12px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 12px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 2px 2px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 13px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 1px 1px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 12px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 29px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 19px 2px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 30px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 18px 1px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 12px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 46px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 36px 2px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 47px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 35px 1px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 12px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 63px 0 / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 53px 2px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 13px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 64px 0 / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 52px 1px / 12px 12px no-repeat,
     
     /* Row 2 */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 17px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 29px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 12px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 2px 19px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 13px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 1px 18px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 17px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 29px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 29px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 19px 19px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 30px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 18px 18px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 17px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 29px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 46px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 36px 19px / 10px 10px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 47px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 35px 18px / 12px 12px no-repeat,
     
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 17px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 29px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 63px 17px / 2px 14px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 53px 19px / 10px 10px no-repeat;
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 17px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 30px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 64px 17px / 1px 14px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 52px 18px / 12px 12px no-repeat;
   animation: padsRedGlowRight 4s ease-in-out infinite 2s;
 }
 
@@ -690,29 +690,29 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   height: 100%;
   background: 
     /* Pad 1 - rectangular 14px x 7px */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 5px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 12px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 2px 2px / 10px 3px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 6px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 13px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 1px 1px / 12px 5px no-repeat,
     /* Pad 2 */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 5px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 29px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 19px 2px / 10px 3px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 6px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 30px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 18px 1px / 12px 5px no-repeat,
     /* Pad 3 */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 5px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 46px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 36px 2px / 10px 3px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 6px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 47px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 35px 1px / 12px 5px no-repeat,
     /* Pad 4 */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 5px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 63px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 53px 2px / 10px 3px no-repeat;
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 6px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 64px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 52px 1px / 12px 5px no-repeat;
 }
 
 /* Not used - placeholder */
@@ -738,29 +738,29 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   height: 100%;
   background: 
     /* Pad 1 - rectangular 14px x 7px */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 5px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 12px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 2px 2px / 10px 3px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 6px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 13px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 1px 1px / 12px 5px no-repeat,
     /* Pad 2 */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 5px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 29px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 19px 2px / 10px 3px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 6px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 30px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 18px 1px / 12px 5px no-repeat,
     /* Pad 3 */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 5px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 46px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 36px 2px / 10px 3px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 6px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 47px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 35px 1px / 12px 5px no-repeat,
     /* Pad 4 */
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 5px / 14px 2px no-repeat,
-    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 63px 0 / 2px 7px no-repeat,
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 53px 2px / 10px 3px no-repeat;
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 6px / 14px 1px no-repeat,
+    linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 64px 0 / 1px 7px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 52px 1px / 12px 5px no-repeat;
 }
 
 /* Not used - placeholder */
@@ -1056,7 +1056,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 10px;
   height: 64px;
-  bottom: 85px;
+  bottom: 90px;
   left: calc(50% - 16px);
   z-index: 3;
   display: flex;
@@ -1123,7 +1123,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 10px;
   height: 64px;
-  bottom: 85px;
+  bottom: 90px;
   left: calc(50% + 8px);
   z-index: 3;
   display: flex;
