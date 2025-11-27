@@ -1,4 +1,25 @@
+html {
+  width: 100%;
+  font-size: 16px;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
 body {
+  width: 100%;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  contain: layout paint;
   background: 
     repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 255, 0.03) 2px, rgba(0, 255, 255, 0.03) 4px),
     repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 255, 255, 0.03) 2px, rgba(0, 255, 255, 0.03) 4px),
@@ -421,19 +442,39 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   width: 320px;
   height: 200px;
   z-index: 1;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  contain: layout paint;
+  will-change: transform;
 }
 
 /* Main controller body - expanded for more space */
 .led-bulb {
+  position: absolute;
+  top: 15px;
+  left: 10px;
   width: 300px;
   height: 170px;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  contain: layout paint;
+  will-change: transform;
   background: 
     /* Left side buttons - reduced black circles with silver border around LED animations */
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 12.75px 115px / 18px 18px no-repeat,
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 13.5px 137.275px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 13px 115px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 13px 138px / 18px 18px no-repeat,
     /* Right side buttons - reduced black circles with silver border around LED animations */
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 176.85px 115px / 18px 18px no-repeat,
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8.3px, transparent 9px) 177.8px 137.5px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 177px 115px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 177px 138px / 18px 18px no-repeat,
     /* Main body gradient */
     linear-gradient(180deg, rgba(20, 20, 25, 0.98) 0%, rgba(10, 10, 15, 0.98) 100%);
   border: 3px solid rgba(0, 255, 255, 0.6);
@@ -442,9 +483,6 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     0 0 35px rgba(0, 255, 255, 0.5),
     inset 0 0 30px rgba(0, 255, 255, 0.08),
     0 6px 25px rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 15px;
-  left: 10px;
   z-index: 1;
   animation: controllerGlow 3s ease-in-out infinite;
 }
@@ -762,7 +800,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   content: '▶/❚❚';
   position: absolute;
   top: 22px;
-  left: 0;
+  left: -1px;
   width: 14px;
   height: 14px;
   background: transparent;
@@ -811,7 +849,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   content: '▶/❚❚';
   position: absolute;
   top: 22px;
-  left: 0;
+  left: 2;
   width: 14px;
   height: 14px;
   background: transparent;
@@ -865,7 +903,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Left channel fader rail */
 .channel-fader-left {
   position: absolute;
-  width: 1.5px;
+  width: 1px;
   height: 22px;
   bottom: 36px;
   left: calc(50% - 15px);
@@ -922,7 +960,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Right channel fader rail */
 .channel-fader-right {
   position: absolute;
-  width: 1.5px;
+  width: 1px;
   height: 22px;
   bottom: 36px;
   left: calc(50% + 10px);
@@ -998,7 +1036,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .led-icon::after {
   content: '';
   position: absolute;
-  width: 2px;
+  width: 1px;
   height: 12px;
   bottom: 15.5px;
   left: calc(50% - 9px);
@@ -1019,11 +1057,17 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   width: 10px;
   height: 64px;
   bottom: 85px;
-  left: calc(50% - 20.5px);
+  left: calc(50% - 21px);
   z-index: 3;
   display: flex;
   flex-direction: column;
   gap: 0;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  contain: layout paint;
+  will-change: transform;
 }
 
 /* Individual knobs for left column using background gradients */
@@ -1053,25 +1097,25 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   height: 100%;
   background: 
     /* Knob 1 indicator */
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.425px 2.5px / 0.75px 0.75px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.425px 2.875px / 0.75px 2px no-repeat,
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.425px 4.75px / 0.75px 0.75px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 4px 3px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 3px / 1px 2px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 4px 5px / 1px 1px no-repeat,
     /* Knob 2 indicator */
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.425px 17.5px / 0.75px 0.75px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.425px 17.875px / 0.75px 2px no-repeat,
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.425px 19.75px / 0.75px 0.75px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 4px 18px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 18px / 1px 2px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 4px 20px / 1px 1px no-repeat,
     /* Knob 3 indicator */
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.425px 29.5px / 0.75px 0.75px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.425px 29.875px / 0.75px 2px no-repeat,
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.425px 31.75px / 0.75px 0.75px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 4px 30px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 30px / 1px 2px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 4px 32px / 1px 1px no-repeat,
     /* Knob 4 indicator */
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.425px 41.5px / 0.75px 0.75px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.425px 41.875px / 0.75px 2px no-repeat,
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.425px 43.75px / 0.75px 0.75px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 4px 42px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 42px / 1px 2px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 4px 44px / 1px 1px no-repeat,
     /* Knob 5 indicator */
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.425px 56.5px / 0.75px 0.75px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.425px 56.875px / 0.75px 2px no-repeat,
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.425px 58.75px / 0.75px 0.75px no-repeat;
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 4px 57px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4px 57px / 1px 2px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 4px 59px / 1px 1px no-repeat;
 }
 
 /* Right knobs column - 5 knobs above CUE button */
@@ -1085,6 +1129,15 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   display: flex;
   flex-direction: column;
   gap: 0;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  contain: layout paint;
+  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Individual knobs for right column using background gradients */
@@ -1114,25 +1167,25 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   height: 100%;
   background: 
     /* Knob 1 indicator */
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.65px 2.5px / 0.75px 0.75px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.65px 2.875px / 0.75px 2px no-repeat,
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.65px 4.75px / 0.75px 0.75px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 5px 3px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 5px 3px / 1px 2px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 5px 5px / 1px 1px no-repeat,
     /* Knob 2 indicator */
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.65px 17.5px / 0.75px 0.75px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.65px 17.875px / 0.75px 2px no-repeat,
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.65px 19.75px / 0.75px 0.75px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 5px 18px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 5px 18px / 1px 2px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 5px 20px / 1px 1px no-repeat,
     /* Knob 3 indicator */
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.65px 29.5px / 0.75px 0.75px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.65px 29.875px / 0.75px 2px no-repeat,
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.65px 31.75px / 0.75px 0.75px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 5px 30px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 5px 30px / 1px 2px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 5px 32px / 1px 1px no-repeat,
     /* Knob 4 indicator */
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.65px 41.5px / 0.75px 0.75px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.65px 41.875px / 0.75px 2px no-repeat,
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.65px 43.75px / 0.75px 0.75px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 5px 42px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 5px 42px / 1px 2px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 5px 44px / 1px 1px no-repeat,
     /* Knob 5 indicator */
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.65px 56.5px / 0.75px 0.75px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.65px 56.875px / 0.75px 2px no-repeat,
-    radial-gradient(circle at 50% 0.375px, rgba(0, 255, 255, 1) 0.375px, transparent 0.375px) 4.65px 58.75px / 0.75px 0.75px no-repeat;
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 5px 57px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 5px 57px / 1px 2px no-repeat,
+    radial-gradient(circle at 50% 0px, rgba(0, 255, 255, 1) 0px, transparent 1px) 5px 59px / 1px 1px no-repeat;
 }
 
 
@@ -1914,4 +1967,28 @@ body.music-active #welcomeSection,
 body.manual-active #welcomeSection,
 body.rainbow-active #welcomeSection {
   display: none;
+}
+
+/* Force consistent rendering across all devices */
+@media screen {
+  * {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  .led-icon,
+  .led-bulb,
+  .knobs-left,
+  .knobs-right,
+  .knobs-left::before,
+  .knobs-left::after,
+  .knobs-right::before,
+  .knobs-right::after {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+  }
 }
