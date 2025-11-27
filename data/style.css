@@ -721,6 +721,51 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) 52px 1px / 12px 5px no-repeat;
 }
 
+/* Labels for rectangular pads */
+.hotcue-pads-left .pad-label,
+.hotcue-pads-right .pad-label {
+  position: absolute;
+  width: 12px;
+  height: 5px;
+  top: 1.5px;
+  font-size: 1.7px;
+  font-weight: 100;
+  color: rgba(80, 80, 80, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+  z-index: 5;
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+  letter-spacing: -0.15px;
+  word-spacing: -0.6px;
+  transform: scaleY(1.3) scaleX(0.85);
+}
+
+.hotcue-pads-left .pad-label[data-pad="1"],
+.hotcue-pads-right .pad-label[data-pad="1"] {
+  left: 33.5px;
+}
+
+.hotcue-pads-left .pad-label[data-pad="2"],
+.hotcue-pads-right .pad-label[data-pad="2"] {
+  left: 50.5px;
+}
+
+.hotcue-pads-left .pad-label[data-pad="3"],
+.hotcue-pads-right .pad-label[data-pad="3"] {
+  left: 67.5px;
+}
+
+.hotcue-pads-left .pad-label[data-pad="4"],
+.hotcue-pads-right .pad-label[data-pad="4"] {
+  left: 84.5px;
+}
+
 /* Not used - placeholder */
 .hotcue-pads-left::after {
   content: '';
