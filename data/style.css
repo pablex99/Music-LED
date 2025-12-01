@@ -491,9 +491,9 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .led-bulb::before {
   content: '';
   position: absolute;
-  width: 70px;
-  height: 70px;
-  top: 25px;
+  width: 60px;
+  height: 60px;
+  top: 30px;
   left: 30px;
   background: 
     radial-gradient(circle at center, 
@@ -516,9 +516,9 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .led-bulb::after {
   content: '';
   position: absolute;
-  width: 70px;
-  height: 70px;
-  top: 25px;
+  width: 60px;
+  height: 60px;
+  top: 30px;
   right: 30px;
   background: 
     radial-gradient(circle at center, 
@@ -1260,10 +1260,10 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* TEMPO FADERS */
 .tempo-fader-left {
   position: absolute;
-  width: 12px;
-  height: 60px;
-  left: 10px;
-  top: 40px;
+  width: 2px;
+  height: 50px;
+  left: 122px;
+  top: 115px;
   background: linear-gradient(180deg, #222 0%, #444 100%);
   border-radius: 6px;
   border: 2px solid #00ffff;
@@ -1275,9 +1275,9 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 }
 .tempo-fader-left .tempo-thumb {
   position: absolute;
-  left: 1px;
+  left: -5px;
   width: 10px;
-  height: 16px;
+  height: 10px;
   top: 22px;
   background: linear-gradient(90deg, #00ffff 0%, #222 100%);
   border-radius: 5px;
@@ -1288,10 +1288,10 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 }
 .tempo-fader-right {
   position: absolute;
-  width: 12px;
-  height: 60px;
-  right: 10px;
-  top: 40px;
+  width: 2px;
+  height: 50px;
+  right: 15px;
+  top: 115px;
   background: linear-gradient(180deg, #222 0%, #444 100%);
   border-radius: 6px;
   border: 2px solid #00ffff;
@@ -1303,9 +1303,9 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 }
 .tempo-fader-right .tempo-thumb {
   position: absolute;
-  left: 1px;
+  left: -5px;
   width: 10px;
-  height: 16px;
+  height: 10px;
   top: 22px;
   background: linear-gradient(90deg, #00ffff 0%, #222 100%);
   border-radius: 5px;
