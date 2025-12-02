@@ -39,11 +39,7 @@
   </section>
 
   <section id="modesSection">
-    <h3>Modos</h3>
-    <button id="modeManual" class="modeBtn" onclick="setMode('manual')">Manual</button>
-    <button id="modeMusic" class="modeBtn" onclick="setMode('music')">Música</button>
-    <button id="modeRainbow" class="modeBtn" onclick="setMode('rainbow')">Arcoíris</button>
-  </section>
+    <!-- Eliminado: botones de modo y título sobre la controladora -->
 
   <section id="welcomeSection">
     <div class="welcome-container">
@@ -90,10 +86,10 @@
         <div class="tempo-fader-right"><div class="tempo-thumb"></div></div>
       </div>
       <h3 class="welcome-text">Selecciona un modo para comenzar</h3>
-      <div class="tech-divider">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div style="display: flex; justify-content: center; gap: 40px; margin-top: 16px;">
+        <button id="modeManual" class="modeBtn" onclick="setMode('manual')" style="margin: 0;">Manual</button>
+        <button id="modeMusic" class="modeBtn" onclick="setMode('music')" style="margin: 0;">Música</button>
+        <button id="modeRainbow" class="modeBtn" onclick="setMode('rainbow')" style="margin: 0;">Arcoíris</button>
       </div>
     </div>
   </section>
