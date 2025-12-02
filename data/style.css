@@ -1275,22 +1275,16 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 }
 .tempo-fader-left .tempo-thumb {
   position: absolute;
-  left: -8px;
-  width: 18px;
-  height: 18px;
-  top: 16px;
-  background: radial-gradient(circle at 60% 40%, #00ffff 70%, #222 100%);
-  border-radius: 50%;
-  border: 3px solid #00ffff;
-  box-shadow: 0 0 18px #00ffff, 0 2px 12px rgba(0,0,0,0.7), 0 0 8px #fff inset;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  top: 22px;
+  background: linear-gradient(90deg, #00ffff 0%, #222 100%);
+  border-radius: 5px;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 2px 6px rgba(0,0,0,0.5);
   cursor: pointer;
   z-index: 16;
-  transition: box-shadow 0.2s, background 0.2s;
-}
-.tempo-fader-left .tempo-thumb:hover {
-  box-shadow: 0 0 32px #00ffff, 0 2px 18px rgba(0,255,255,0.5), 0 0 12px #fff inset;
-  background: radial-gradient(circle at 50% 50%, #00ffff 90%, #fff 100%);
-}
 }
 .tempo-fader-right {
   position: absolute;
@@ -1309,22 +1303,16 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 }
 .tempo-fader-right .tempo-thumb {
   position: absolute;
-  left: -8px;
-  width: 18px;
-  height: 18px;
-  top: 16px;
-  background: radial-gradient(circle at 60% 40%, #00ffff 70%, #222 100%);
-  border-radius: 50%;
-  border: 3px solid #00ffff;
-  box-shadow: 0 0 18px #00ffff, 0 2px 12px rgba(0,0,0,0.7), 0 0 8px #fff inset;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  top: 22px;
+  background: linear-gradient(90deg, #00ffff 0%, #222 100%);
+  border-radius: 5px;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 2px 6px rgba(0,0,0,0.5);
   cursor: pointer;
   z-index: 16;
-  transition: box-shadow 0.2s, background 0.2s;
-}
-.tempo-fader-right .tempo-thumb:hover {
-  box-shadow: 0 0 32px #00ffff, 0 2px 18px rgba(0,255,255,0.5), 0 0 12px #fff inset;
-  background: radial-gradient(circle at 50% 50%, #00ffff 90%, #fff 100%);
-}
 }
 
 @keyframes controllerGlow {
