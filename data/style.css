@@ -458,10 +458,10 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Main controller body - expanded for more space */
 .led-bulb {
   position: absolute;
-  top: 15px;
+  top: 5px;
   left: 10px;
   width: 300px;
-  height: 170px;
+  height: 180px;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -470,11 +470,11 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   will-change: transform;
   background: 
     /* Left side buttons - reduced black circles with silver border around LED animations */
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 13px 115px / 18px 18px no-repeat,
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 13px 138px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 13px 125px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 13px 148px / 18px 18px no-repeat,
     /* Right side buttons - reduced black circles with silver border around LED animations */
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 187px 115px / 18px 18px no-repeat,
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 187px 138px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 187px 125px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 187px 148px / 18px 18px no-repeat,
     /* Main body gradient */
     linear-gradient(180deg, rgba(20, 20, 25, 0.98) 0%, rgba(10, 10, 15, 0.98) 100%);
   border: 3px solid rgba(0, 255, 255, 0.6);
@@ -491,10 +491,10 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .led-bulb::before {
   content: '';
   position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 30px;
-  left: 30px;
+  width: 70px;
+  height: 70px;
+  top: 37px;
+  left: 28px;
   background: 
     radial-gradient(circle at center, 
       rgba(0, 255, 255, 0.9) 0%, 
@@ -516,10 +516,10 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .led-bulb::after {
   content: '';
   position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 30px;
-  right: 30px;
+  width: 70px;
+  height: 70px;
+  top: 37px;
+  right: 22px;
   background: 
     radial-gradient(circle at center, 
       rgba(0, 255, 255, 0.9) 0%, 
@@ -876,7 +876,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Loop buttons - upper left corner */
 .loop-buttons-left {
   position: absolute;
-  top: 30px;
+  top: 28px;
   left: 30px;
   display: flex;
   gap: 8px;
@@ -901,7 +901,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Loop buttons - upper right corner */
 .loop-buttons-right {
   position: absolute;
-  top: 30px;
+  top: 28px;
   right: 86px;
   display: flex;
   gap: 8px;
@@ -1079,7 +1079,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 10px;
   height: 64px;
-  bottom: 90px;
+  bottom: 100px;
   left: calc(50% - 16px);
   z-index: 3;
   display: flex;
@@ -1146,7 +1146,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 10px;
   height: 64px;
-  bottom: 90px;
+  bottom: 100px;
   left: calc(50% + 8px);
   z-index: 3;
   display: flex;
@@ -1863,7 +1863,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 25px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   background: 
@@ -1921,8 +1921,8 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 8px;
   height: 4px;
-  top: 27px;
-  left: calc(50% - 30px);
+  top: 20px;
+  left: calc(50% - 25px);
   background: linear-gradient(135deg, rgba(70, 70, 75, 1) 0%, rgba(40, 40, 45, 1) 50%, rgba(20, 20, 25, 1) 100%);
   border: 1px solid rgba(80, 80, 80, 0.7);
   border-radius: 1px;
@@ -1935,8 +1935,8 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   position: absolute;
   width: 8px;
   height: 4px;
-  top: 27px;
-  left: calc(50% + 22px);
+  top: 20px;
+  left: calc(50% + 17px);
   background: linear-gradient(135deg, rgba(70, 70, 75, 1) 0%, rgba(40, 40, 45, 1) 50%, rgba(20, 20, 25, 1) 100%);
   border: 1px solid rgba(80, 80, 80, 0.7);
   border-radius: 1px;
