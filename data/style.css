@@ -473,8 +473,8 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 13px 115px / 18px 18px no-repeat,
     radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 13px 138px / 18px 18px no-repeat,
     /* Right side buttons - reduced black circles with silver border around LED animations */
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 177px 115px / 18px 18px no-repeat,
-    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 177px 138px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 187px 115px / 18px 18px no-repeat,
+    radial-gradient(circle, transparent 0%, transparent 4px, #000 4px, #000 8px, #c0c0c0 8px, #c0c0c0 8px, transparent 9px) 187px 138px / 18px 18px no-repeat,
     /* Main body gradient */
     linear-gradient(180deg, rgba(20, 20, 25, 0.98) 0%, rgba(10, 10, 15, 0.98) 100%);
   border: 3px solid rgba(0, 255, 255, 0.6);
@@ -580,7 +580,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   width: 71px;
   height: 37px;
   bottom: 0;
-  left: 165px;
+  left: 175px;
   background: 
     /* Larger black backgrounds for pads */
     linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)) 0 0 / 14px 14px no-repeat,
@@ -697,7 +697,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   width: 65px;
   height: 9px;
   bottom: 64px;
-  left: 180px;
+  left: 190px;
   z-index: 3;
 }
 
@@ -793,7 +793,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Round button right - CUE LED animation (orange) positioned near right pads */
 .round-buttons-right {
   position: absolute;
-  left: 191px;
+  left: 201px;
   top: 134px;
   width: 14px;
   height: 14px;
@@ -822,7 +822,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   content: '▶/❚❚';
   position: absolute;
   top: 22px;
-  left: 2;
+  left: -1px;
   width: 14px;
   height: 14px;
   background: transparent;
@@ -859,7 +859,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 /* Square button right - small square button */
 .square-button-right {
   position: absolute;
-  left: 194px;
+  left: 204px;
   top: 116px;
   width: 4px;
   height: 4px;
@@ -902,7 +902,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .loop-buttons-right {
   position: absolute;
   top: 30px;
-  right: 96px;
+  right: 86px;
   display: flex;
   gap: 8px;
   z-index: 20;
