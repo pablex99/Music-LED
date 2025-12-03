@@ -14,11 +14,11 @@
 }
 .high-label-left {
   left: 137px;
-  top: 56px;
+  top: 51px;
 }
 .high-label-right {
   left: 161px;
-  top: 56px;
+  top: 51px;
 }
 
 /*MID labels - freely positionable */
@@ -37,11 +37,11 @@
 }
 .mid-label-left {
   left: 137.5px;
-  top: 70px;
+  top: 65px;
 }
 .mid-label-right {
   left: 161.5px;
-  top: 70px;
+  top: 65px;
 }
 
 /*LOW labels - freely positionable */
@@ -60,11 +60,11 @@
 }
 .low-label-left {
   left: 137.5px;
-  top: 84.5px;
+  top: 79.5px;
 }
 .low-label-right {
   left: 161.5px;
-  top: 84.5px;
+  top: 79.5px;
 }
 
 /*FILTER labels - freely positionable */
@@ -83,11 +83,11 @@
 }
 .filter-label-left-new {
   left: 136px;
-  top: 98px;
+  top: 93px;
 }
 .filter-label-right-new {
   left: 160px;
-  top: 98px;
+  top: 93px;
 }
 html {
   width: 100%;
@@ -1194,13 +1194,13 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     /* Knob 1 (top) */
     radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 0px / 10px 10px no-repeat,
     /* Knob 2 */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 26px / 10px 10px no-repeat,
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 21px / 10px 10px no-repeat,
     /* Knob 3 */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 40px / 10px 10px no-repeat,
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 35px / 10px 10px no-repeat,
     /* Knob 4 */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 54px / 10px 10px no-repeat,
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 49px / 10px 10px no-repeat,
     /* Knob 5 (bottom) */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 68px / 10px 10px no-repeat;
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 63px / 10px 10px no-repeat;
 }
 
 /* Knob borders and indicator lines for left column */
@@ -1215,21 +1215,21 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 3px / 1px 3px no-repeat,
     radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 5px / 1px 1px no-repeat,
     /* Knob 2 indicator - capsule shape */
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 28px / 1px 1px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 28.5px / 1px 3px no-repeat,
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 31px / 1px 1px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 23px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 23.5px / 1px 3px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 26px / 1px 1px no-repeat,
     /* Knob 3 indicator - capsule shape */
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 42px / 1px 1px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 42.5px / 1px 3px no-repeat,
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 45px / 1px 1px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 37px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 37.5px / 1px 3px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 40px / 1px 1px no-repeat,
     /* Knob 4 indicator - capsule shape */
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 56px / 1px 1px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 56.5px / 1px 3px no-repeat,
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 59px / 1px 1px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 51px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 51.5px / 1px 3px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 54px / 1px 1px no-repeat,
     /* Knob 5 indicator - capsule shape */
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 70px / 1px 1px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 70.5px / 1px 3px no-repeat,
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 73px / 1px 1px no-repeat;
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 65px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 65.5px / 1px 3px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 68px / 1px 1px no-repeat;
 }
 
 /* Right knobs column - 5 knobs above CUE button */
@@ -1264,13 +1264,13 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     /* Knob 1 (top) */
     radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 0 / 10px 10px no-repeat,
     /* Knob 2 */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 26px / 10px 10px no-repeat,
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 21px / 10px 10px no-repeat,
     /* Knob 3 */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 40px / 10px 10px no-repeat,
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 35px / 10px 10px no-repeat,
     /* Knob 4 */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 54px / 10px 10px no-repeat,
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 49px / 10px 10px no-repeat,
     /* Knob 5 (bottom) */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 68px / 10px 10px no-repeat;
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 63px / 10px 10px no-repeat;
 }
 
 /* Knob borders and indicator lines for right column */
@@ -1285,21 +1285,21 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 3px / 1px 3px no-repeat,
     radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 5px / 1px 1px no-repeat,
     /* Knob 2 indicator - capsule shape */
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 28px / 1px 1px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 28.5px / 1px 3px no-repeat,
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 31px / 1px 1px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 23px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 23.5px / 1px 3px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 26px / 1px 1px no-repeat,
     /* Knob 3 indicator - capsule shape */
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 42px / 1px 1px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 42.5px / 1px 3px no-repeat,
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 45px / 1px 1px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 37px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 37.5px / 1px 3px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 40px / 1px 1px no-repeat,
     /* Knob 4 indicator - capsule shape */
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 56px / 1px 1px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 56.5px / 1px 3px no-repeat,
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 59px / 1px 1px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 51px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 51.5px / 1px 3px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 54px / 1px 1px no-repeat,
     /* Knob 5 indicator - capsule shape */
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 70px / 1px 1px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 70.5px / 1px 3px no-repeat,
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 73px / 1px 1px no-repeat;
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 65px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 65.5px / 1px 3px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 68px / 1px 1px no-repeat;
 }
 
 
