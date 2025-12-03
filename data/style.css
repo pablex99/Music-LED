@@ -1130,7 +1130,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     /* Knob 3 */
     radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 27px / 10px 10px no-repeat,
     /* Knob 4 */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 39px / 10px 10px no-repeat,
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 54px / 10px 10px no-repeat,
     /* Knob 5 (bottom) */
     radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 68px / 10px 10px no-repeat;
 }
@@ -1155,9 +1155,9 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 30px / 1px 3px no-repeat,
     radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 32px / 1px 1px no-repeat,
     /* Knob 4 indicator - capsule shape */
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 41px / 1px 1px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 41.5px / 1px 3px no-repeat,
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 44px / 1px 1px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 56px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 56.5px / 1px 3px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 59px / 1px 1px no-repeat,
     /* Knob 5 indicator - capsule shape */
     radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 70px / 1px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 70.5px / 1px 3px no-repeat,
@@ -1200,7 +1200,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     /* Knob 3 */
     radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 27px / 10px 10px no-repeat,
     /* Knob 4 */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 39px / 10px 10px no-repeat,
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 54px / 10px 10px no-repeat,
     /* Knob 5 (bottom) */
     radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 68px / 10px 10px no-repeat;
 }
@@ -1225,9 +1225,9 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
     linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 30px / 1px 3px no-repeat,
     radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 32px / 1px 1px no-repeat,
     /* Knob 4 indicator - capsule shape */
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 41px / 1px 1px no-repeat,
-    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 41.5px / 1px 3px no-repeat,
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 44px / 1px 1px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 56px / 1px 1px no-repeat,
+    linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 56.5px / 1px 3px no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 59px / 1px 1px no-repeat,
     /* Knob 5 indicator - capsule shape */
     radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 1) 0px, rgba(0, 255, 255, 1) 0.5px, transparent 0.5px) 4.5px 70px / 1px 1px no-repeat,
     linear-gradient(rgba(0, 255, 255, 1), rgba(0, 255, 255, 1)) 4.5px 70.5px / 1px 3px no-repeat,
