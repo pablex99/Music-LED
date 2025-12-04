@@ -1030,7 +1030,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .loop-buttons-right {
   position: absolute;
   top: 28px;
-  right: 74px;
+  right: 29px;
   display: flex;
   gap: 8px;
   z-index: 20;
@@ -1076,6 +1076,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   border: 2px solid #111;
   margin-left: 2px;
   margin-top: 2px;
+  margin-right: 16px;
   vertical-align: middle;
 }
 
@@ -1387,7 +1388,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 }
 
 .cue-label-right {
-  left: 191px;
+  left: 200px;
   top: 176px;
 }
 
@@ -2121,4 +2122,50 @@ body.rainbow-active #welcomeSection {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: pixelated;
   }
+}
+
+.arrow-btn-group-left{
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+  align-items: center;
+}
+.arrow-btn-group-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.arrow-btn {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow-btn-left::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-right: 2px solid #fff;
+  position: absolute;
+  left: 1.5px;
+  top: 2px;
+}
+.arrow-btn-right::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 2px solid #fff;
+  position: absolute;
+  right: 2px;
+  top: 2px;
 }
