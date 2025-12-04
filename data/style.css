@@ -999,8 +999,8 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .loop-buttons-left .loop-btn {
   width: 8px;
   height: 8px;
-  background: rgba(80, 80, 80, 0.7);
-  border: 1.5px solid rgba(80, 80, 80, 0.7);
+  background: rgba(255, 150, 0, 0.8);
+  border: 1px solid rgba(255, 150, 0, 1);
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(80,80,80,0.2);
   align-items: center;
@@ -1024,8 +1024,8 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .loop-buttons-right .loop-btn {
   width: 8px;
   height: 8px;
-  background: rgba(80, 80, 80, 0.7);
-  border: 1.5px solid rgba(80, 80, 80, 0.7);
+  background: rgba(80, 80, 80, 0.8);
+  border: 1px solid rgba(80, 80, 80, 1);
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(80,80,80,0.2);
   align-items: center;
@@ -1035,6 +1035,18 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   font-family: 'Press Start 2P', monospace;
   box-shadow: 0 0 8px rgba(0,255,255,0.3);
   font-weight: bold;
+  animation: loopRightBlink 0.7s infinite;
+}
+
+@keyframes loopRightBlink {
+  0%, 100% {
+    background: rgba(255, 150, 0, 0.8);
+    border: 2px solid rgba(255, 150, 0, 1);
+  }
+  50% {
+    background: rgba(80, 80, 80, 0.8);
+    border: 2px solid rgba(80, 80, 80, 1);
+  }
 }
 
 /* Left channel fader rail */
@@ -1285,7 +1297,7 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   height: 100%;
   background: 
     /* Knob 1 (top) */
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 0 / 10px 10px no-repeat,
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 0px / 10px 10px no-repeat,
     /* Knob 2 */
     radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(0, 200, 200, 0.5) 38%, rgba(0, 255, 255, 0.7) 38%, rgba(0, 255, 255, 0.7) 48%, transparent 42%, transparent 100%) 0 21px / 10px 10px no-repeat,
     /* Knob 3 */
@@ -1577,45 +1589,10 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   }
   50% {
     background: 
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 2px 14px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 12px / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 12px 0 / 2px 14px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 17px 0 / 14px 2px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 17px 0 / 2px 14px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 17px 12px / 14px 2px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 29px 0 / 2px 14px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 0 / 2px 14px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 12px / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 46px 0 / 2px 14px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 0 / 2px 14px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 51px 12px / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 63px 0 / 2px 14px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 0 17px / 14px 2px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 0 17px / 2px 14px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 0 29px / 14px 2px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 12px 17px / 2px 14px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 17px / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 17px / 2px 14px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 29px / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 29px 17px / 2px 14px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 17px / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 17px / 2px 14px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 34px 29px / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 46px 17px / 2px 14px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 51px 17px / 14px 2px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 51px 17px / 2px 14px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 51px 29px / 14px 2px no-repeat,
-      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 63px 17px / 2px 14px no-repeat;
-  }
-  75% {
-    background: 
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 0 / 2px 14px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 0 12px / 14px 2px no-repeat,
-      linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 12px 0 / 2px 14px no-repeat,
+      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 0 0 / 14px 2px no-repeat,
+      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 0 0 / 2px 14px no-repeat,
+      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 0 12px / 14px 2px no-repeat,
+      linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9)) 12px 0 / 2px 14px no-repeat,
       linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 14px 2px no-repeat,
       linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 0 / 2px 14px no-repeat,
       linear-gradient(rgba(80, 80, 80, 0.7), rgba(80, 80, 80, 0.7)) 17px 12px / 14px 2px no-repeat,
@@ -2113,6 +2090,45 @@ body.rainbow-active #welcomeSection {
     -moz-osx-font-smoothing: auto;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: pixelated;
+  }
+}
+
+/* Loop buttons - upper right corner */
+.loop-buttons-right {
+  position: absolute;
+  top: 28px;
+  right: 86px;
+  display: flex;
+  gap: 8px;
+  z-index: 20;
+}
+.loop-buttons-right .loop-btn {
+  width: 8px;
+  height: 8px;
+  background: rgba(80, 80, 80, 0.7);
+  border: 1px solid rgba(80, 80, 80, 0.7);
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(80,80,80,0.2);
+  align-items: center;
+  justify-content: center;
+  color: #00ffff;
+  font-size: 7px;
+  font-family: 'Press Start 2P', monospace;
+  box-shadow: 0 0 8px rgba(0,255,255,0.3);
+  font-weight: bold;
+  animation: loopRightBlink 2s steps(1, end) infinite;
+  background: rgba(255, 150, 0, 0.8);
+  border: 2px solid rgba(255, 150, 0, 1);
+}
+
+@keyframes loopRightBlink {
+  0%, 100% {
+    background: rgba(255, 150, 0, 0.8);
+    border: 1px solid rgba(255, 150, 0, 1);
+  }
+  50% {
+    background: rgba(255, 150, 0, 0.2);
+    border: 1px solid rgba(255, 150, 0, 0.5);
   }
 }
 
