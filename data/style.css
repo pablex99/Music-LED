@@ -1012,11 +1012,25 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   font-weight: bold;
 }
 
+/* Botón redondo pequeño izquierdo con borde negro y fondo gris */
+.small-loop-btn-left {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background:rgba(255, 150, 0, 1);
+  box-shadow: 0 0 0 0.25px rgba(255, 150, 0, 1);
+  border: 2px solid #111;
+  margin-left: 2px;
+  margin-top: 2px;
+  vertical-align: middle;
+}
+
 /* Loop buttons - upper right corner */
 .loop-buttons-right {
   position: absolute;
   top: 28px;
-  right: 86px;
+  right: 74px;
   display: flex;
   gap: 8px;
   z-index: 20;
@@ -1024,8 +1038,8 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
 .loop-buttons-right .loop-btn {
   width: 8px;
   height: 8px;
-  background: rgba(80, 80, 80, 0.8);
-  border: 1px solid rgba(80, 80, 80, 1);
+  background: rgba(80, 80, 80, 0.7);
+  border: 1px solid rgba(80, 80, 80, 0.7);
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(80,80,80,0.2);
   align-items: center;
@@ -1035,18 +1049,34 @@ body.rainbow-active #modesSection, body.rainbow-active #rainbowSection {
   font-family: 'Press Start 2P', monospace;
   box-shadow: 0 0 8px rgba(0,255,255,0.3);
   font-weight: bold;
-  animation: loopRightBlink 0.7s infinite;
+  animation: loopRightBlink 2s steps(1, end) infinite;
+  background: rgba(255, 150, 0, 0.8);
+  border: 1px solid rgba(255, 150, 0, 1);
 }
 
 @keyframes loopRightBlink {
   0%, 100% {
     background: rgba(255, 150, 0, 0.8);
-    border: 2px solid rgba(255, 150, 0, 1);
+    border: 1px solid rgba(255, 150, 0, 1);
   }
   50% {
     background: rgba(80, 80, 80, 0.8);
-    border: 2px solid rgba(80, 80, 80, 1);
+    border: 1px solid rgba(80, 80, 80, 1);
   }
+}
+
+/* Botón redondo pequeño derecho con borde negro y fondo gris */
+.small-loop-btn-right {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: rgba(187, 187, 187, 0.26);
+  box-shadow: 0 0 0 0.25px rgba(187, 187, 187, 0.26);
+  border: 2px solid #111;
+  margin-left: 2px;
+  margin-top: 2px;
+  vertical-align: middle;
 }
 
 /* Left channel fader rail */
@@ -2092,46 +2122,3 @@ body.rainbow-active #welcomeSection {
     image-rendering: pixelated;
   }
 }
-
-/* Loop buttons - upper right corner */
-.loop-buttons-right {
-  position: absolute;
-  top: 28px;
-  right: 86px;
-  display: flex;
-  gap: 8px;
-  z-index: 20;
-}
-.loop-buttons-right .loop-btn {
-  width: 8px;
-  height: 8px;
-  background: rgba(80, 80, 80, 0.7);
-  border: 1px solid rgba(80, 80, 80, 0.7);
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(80,80,80,0.2);
-  align-items: center;
-  justify-content: center;
-  color: #00ffff;
-  font-size: 7px;
-  font-family: 'Press Start 2P', monospace;
-  box-shadow: 0 0 8px rgba(0,255,255,0.3);
-  font-weight: bold;
-  animation: loopRightBlink 2s steps(1, end) infinite;
-  background: rgba(255, 150, 0, 0.8);
-  border: 2px solid rgba(255, 150, 0, 1);
-}
-
-@keyframes loopRightBlink {
-  0%, 100% {
-    background: rgba(255, 150, 0, 0.8);
-    border: 1px solid rgba(255, 150, 0, 1);
-  }
-  50% {
-    background: rgba(255, 150, 0, 0.2);
-    border: 1px solid rgba(255, 150, 0, 0.5);
-  }
-}
-
-
-
-
