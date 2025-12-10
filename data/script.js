@@ -222,7 +222,9 @@ function highlightModeButton(mode) {
 
 // Actualizar umbral de detección de beat
 function updateBeatDisplay(v) {
-  document.getElementById('beatValDisplay').innerText = v;
+  // Mostrar porcentaje en vez de valor absoluto
+  var percent = Math.round((v / 20000) * 100);
+  document.getElementById('beatValDisplay').innerText = percent;
 
   if (window._beatTimeout) clearTimeout(window._beatTimeout);
 
@@ -235,7 +237,10 @@ function updateBeatDisplay(v) {
 // Actualizar velocidad del arcoíris (ms por paso) con debounce
 function updateRainbowSpeed(v) {
   var el = document.getElementById('rainSpeedVal');
-  if (el) el.innerText = v;
+  if (el) {
+    var percent = Math.round(((v - 5) / (1000 - 5)) * 100);
+    el.innerText = percent;
+  }
 
   if (window._rainSpeedTimeout) clearTimeout(window._rainSpeedTimeout);
 
@@ -303,7 +308,10 @@ function setMusicSubmode(mode) {
 // Debounced update of music step (ms)
 function updateMusicStep(v) {
   var el = document.getElementById('musicStepVal');
-  if (el) el.innerText = v;
+  if (el) {
+    var percent = Math.round(((v - 5) / (5000 - 5)) * 100);
+    el.innerText = percent;
+  }
 
   if (window._musicStepTimeout) clearTimeout(window._musicStepTimeout);
   window._musicStepTimeout = setTimeout(function(){
@@ -330,7 +338,11 @@ function prefillMusicControls() {
       else setMusicSubmode('multi');
       var msEl = document.getElementById('musicStep');
       var msVal = document.getElementById('musicStepVal');
-      if (msEl && msVal) { msEl.value = j.stepMs; msVal.innerText = j.stepMs; }
+      if (msEl && msVal) {
+        msEl.value = j.stepMs;
+        var percent = Math.round(((j.stepMs - 5) / (5000 - 5)) * 100);
+        msVal.innerText = percent;
+      }
     } catch(e) { console.warn('Error applying music config', e); }
   }).catch(()=>{});
 }
