@@ -35,6 +35,11 @@ document.addEventListener("DOMContentLoaded", function() {
   if (manual) manual.style.display = 'none';
   if (beatSec) beatSec.style.display = 'none';
   if (rainbow) rainbow.style.display = 'none';
+
+  var barActive = document.getElementById('modeBarActive');
+  var barWelcome = document.getElementById('modeBarWelcome');
+  if (barActive) barActive.style.display = 'none';
+  if (barWelcome) barWelcome.style.display = 'flex';
 });
 
 function initColorPickerSequence() {
@@ -136,11 +141,15 @@ function setMode(mode){
   fetch(`/setMode?m=${mode}`)
     .then(() => {
       highlightModeButton(mode);
-      // toggle body classes for mode-specific styling
       document.body.classList.remove('music-active','manual-active','rainbow-active');
       if (mode === 'music') document.body.classList.add('music-active');
       if (mode === 'manual') document.body.classList.add('manual-active');
       if (mode === 'rainbow') document.body.classList.add('rainbow-active');
+      // Mostrar/ocultar barra de modos
+      var barActive = document.getElementById('modeBarActive');
+      var barWelcome = document.getElementById('modeBarWelcome');
+      if (barActive) barActive.style.display = 'flex';
+      if (barWelcome) barWelcome.style.display = 'none';
       // Mostrar/ocultar elementos según modo
       var manual = document.getElementById('manualSection');
       var beat = document.getElementById('beatSection');

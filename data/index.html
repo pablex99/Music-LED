@@ -9,7 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <h2>Controlador RGB</h2>
+  <div id="modeBarActive" style="width:100%;background:rgba(0,20,20,0.8);padding:10px 0;z-index:100;display:none;justify-content:center;gap:40px;">
+    <button id="modeManual" class="modeBtn" onclick="setMode('manual')">Manual</button>
+    <button id="modeMusic" class="modeBtn" onclick="setMode('music')">Música</button>
+    <button id="modeRainbow" class="modeBtn" onclick="setMode('rainbow')">Arcoíris</button>
+  </div>
 
   <section id="manualSection">
     <h3>Control Manual</h3>
@@ -106,10 +112,10 @@
         <div class="tempo-fader-right"><div class="tempo-thumb"></div></div>
       </div>
       <h3 class="welcome-text">Selecciona un modo para comenzar</h3>
-      <div style="display: flex; justify-content: center; gap: 40px; margin-top: 16px;">
-        <button id="modeManual" class="modeBtn" onclick="setMode('manual')" style="margin: 0;">Manual</button>
-        <button id="modeMusic" class="modeBtn" onclick="setMode('music')" style="margin: 0;">Música</button>
-        <button id="modeRainbow" class="modeBtn" onclick="setMode('rainbow')" style="margin: 0;">Arcoíris</button>
+      <div id="modeBarWelcome" style="width:100%;background:rgba(0,20,20,0.8);padding:10px 0;z-index:100;display:flex;justify-content:center;gap:40px;">
+        <button class="modeBtn" onclick="setMode('manual')">Manual</button>
+        <button class="modeBtn" onclick="setMode('music')">Música</button>
+        <button class="modeBtn" onclick="setMode('rainbow')">Arcoíris</button>
       </div>
     </div>
   </section>
